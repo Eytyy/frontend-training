@@ -1,0 +1,39 @@
+/*  utils/_placeholders.scss */
+
+// clearfix: helper function for clearing floats
+%clearfix {
+  &::after {
+    display: table;
+    content: '';
+    clear: both;
+  }
+}
+
+// setFullsizeComponent: helper function for setting floating full size components
+%setFullsizeComponent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// setFullSizeBackground: helper function for setting full-size background images for components
+%setFullSizeBackground {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+// moves: helper function to be used on elements that you're going to animate
+%moves {
+  opacity: 1;
+  transform: translateZ(0);
+}
+
+// hidden: helper function to hide elements
+%hidden {
+  opacity: 0;
+  visibility: hidden;
+  z-index: -1;
+}
