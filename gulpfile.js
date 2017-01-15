@@ -20,7 +20,7 @@ const root = {
 
 const paths = {
   styles: {
-    src: root.src + '/styles/sass/**/*.scss',
+    src: root.src + '/styles/**/*.scss',
     dest: root.dest + '/styles/'
   },
   scripts: {
