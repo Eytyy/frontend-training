@@ -1,3 +1,5 @@
+## Training
+
 - Install dependencies
 
   make sure your have node.js installed on your computer
