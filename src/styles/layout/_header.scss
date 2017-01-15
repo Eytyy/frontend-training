@@ -1,0 +1,249 @@
+.main-header {
+    position: relative;
+    width: 100%;
+    float: left;
+    height: auto;
+    background-image:url(../../images/mainBg.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    padding-top:48.3%;
+    background-blend-mode: multiply;
+    background-color: #575757;
+}
+
+@media screen and (max-width:736px) {
+    .main-header {
+        padding-top: 60%;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .main-header {
+        padding-top: 85%;
+    }
+}
+
+@media screen and (max-width:414px) {
+    .main-header {
+        padding-top: 100%;
+    }
+}
+
+.logo {
+    position: absolute;
+    left: 148px;
+    top: 64px;
+    z-index: 1;
+}
+
+@media screen and (max-width:1440px) {
+    .logo {
+        width: 25%;
+        left: 80px;
+    }
+
+    .logo img {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width:1024px) {
+    .logo {
+        width: 30%;
+    }
+}
+
+
+@media screen and (max-width:1024px) {
+    .logo {
+        left: 40px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .logo {
+        top: 40px;
+    }
+}
+
+@media screen and (max-width:736px) {
+    .logo {
+        top: 30px;
+        left: 20px;
+    }
+}
+
+@media screen and (max-width:480px) {
+       .logo {
+        width: 40%;
+    }
+}
+
+.menu-toggle {
+    position: absolute;
+    right: 76px;
+    top: 61px;
+    z-index: 2;
+    width: 42px;
+    height: 32px;
+}
+
+.menu-toggle img {
+    width: 100%;
+}
+
+@media screen and (max-width:768px) {
+    .menu-toggle {
+        width: 38px;
+        height: 28px;
+        top: 48px;
+    }
+}
+
+@media screen and (max-width:736px) {
+    .menu-toggle {
+        top: 30px;
+        right: 40px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .menu-toggle {
+        width: 32px;
+        height: 21px;
+    }
+}
+
+.intro-component {
+    position: absolute;
+    left: 0;
+    padding-left: 148px;
+    bottom: 0;
+    width: 44.0625%;
+    border-right: 1px solid #9b9b9b;
+}
+
+.intro-video__btn {
+    width: 57px;
+    height: 57px;
+    margin-bottom: 24px;
+    display: block;
+}
+
+.intro-video__btn img {
+    width: 100%;
+}
+
+.intro-text {
+    text-transform: uppercase;
+    font-family: $Bold;
+    font-size: 60px;
+    line-height: 64px;
+    color: #ffffff;
+    padding-bottom: 50px;
+}
+
+@media screen and (max-width:1440px) {
+    .intro-component {
+        padding-left: 80px;
+    }
+
+    .intro-video__btn {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 10px;
+    }
+
+    .intro-text {
+        font-size: 45px;
+        line-height: 48px;
+        padding-bottom: 40px;
+    }
+}
+
+@media screen and (max-width:1280px) {
+    .intro-video__btn {
+        width: 45px;
+        height: 45px;
+    }
+
+    .intro-text {
+        font-size: 40px;
+        line-height: 42px;
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .intro-component {
+        padding-left: 40px;
+    }
+
+    .intro-video__btn {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 10px;
+    }
+
+    .intro-text {
+        font-size: 32px;
+        line-height: 36px;
+        padding-bottom: 20px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .intro-component {
+        border: 0;
+    }
+
+    .intro-video__btn {
+        width: 36px;
+        height: 36px;
+        margin-bottom: 10px;
+    }
+
+    .intro-text {
+        font-size: 26px;
+        line-height: 28px;
+        padding-bottom: 15px;
+    }
+}
+
+@media screen and (max-width:736px) {
+    .intro-component {
+        padding-left: 20px;
+    }
+
+    .intro-video__btn {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 10px;
+    }
+
+    .intro-text {
+        font-size: 22px;
+        line-height: 24px;
+        padding-bottom: 30px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .intro-component {
+        width: 50%;
+    }
+    
+    .intro-video__btn {
+        width: 25px;
+        height: 25px;
+        margin-bottom: 10px;
+    }
+
+    .intro-text {
+        font-size: 18px;
+        line-height: 20px;
+        padding-bottom: 10px;
+    }
+}

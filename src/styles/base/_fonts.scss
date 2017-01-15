@@ -15,3 +15,36 @@
   font-weight: normal;
   font-style: normal;
 }
+
+$Regular: Roboto-Regular;
+$Bold: Roboto-Bold;
+$Black: Roboto-Bold;
+$Light: Roboto-Light;
+
+@font-face {
+    font-family: $Regular;
+    src: url(../../fonts/Roboto-Regular.ttf) format('opentype');
+    font-style: normal;
+    font-weight: normal;
+} 
+
+@font-face {
+    font-family: $Bold;
+    src: url(../../fonts/Roboto-Bold.ttf) format('opentype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: $Black;
+    src: url(../../fonts/Roboto-Black.ttf) format('opentype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: $Light;
+    src: url(../../fonts/Roboto-Light.ttf) format('opentype');
+    font-style: normal;
+    font-weight: normal;
+}

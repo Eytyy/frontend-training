@@ -1,0 +1,231 @@
+.website-nav {
+    display: none;
+}
+
+.website-nav-active {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    width: 16.71875%;
+    display: block;
+    background-color: #fff;
+    display: none;
+}
+
+.website-nav__close-icon {
+    width: 19px;
+    height: 19px;
+    margin-left: 54px;
+    position: relative;
+    top: 57px;
+}
+
+.website-nav__main-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 152px 0 0 54px;
+    font-family: $Bold;
+    text-transform: uppercase;
+}
+
+.website-nav__main-menu__item {
+    font-size: 30px;
+    color: #4a4a4a;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1680px) {
+    .website-nav__close-icon {
+        margin-left: 40px;
+    }
+
+    .website-nav__main-menu {
+        margin:152px 0 0 40px;
+    }
+}
+
+@media screen and (max-width:1440px) {
+    .website-nav__close-icon {
+        margin-left: 20px;
+    }
+
+    .website-nav__main-menu {
+        margin:152px 0 0 20px;
+    }
+
+    .website-nav__main-menu__item {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width:1280px) {
+    .website-nav__main-menu__item {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .website-nav__main-menu {
+        margin: 110px 0 0 20px;
+    }
+
+    .website-nav__main-menu__item {
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .website-nav {
+        width: 100%;
+    }
+    
+    .website-nav__close-icon {
+        top: 30px;
+    }
+
+    .website-nav__main-menu {
+        text-align: center;
+        margin: 50px 0 0 10px;
+    }
+}
+
+
+
+.website-nav__main-menu__item_selected {
+    color: #e21318;
+}
+
+.website-nav__footer {
+    margin-top: 375px;
+}
+
+.website-nav__contacts {
+    font-family: $Bold;
+    font-size: 16px;
+    color: #4a4a4a;
+    margin-left: 54px;
+}
+
+
+.website-nav__contacts__item {
+    margin-top: 36px;
+}
+
+.website-nav__contacts__item_small {
+    font-family: $Regular;
+    margin-top: 1px;
+}
+
+@media screen and (max-width:1680px) {
+    .website-nav__footer {
+        margin-top: 250px;
+    }
+
+    .website-nav__contacts {
+        margin-left: 40px;
+    }
+}
+
+@media screen and (max-width:1440px) {
+    .website-nav__footer {
+        margin-top: 200px;
+    }
+
+    .website-nav__contacts {
+        margin-left: 20px;
+    }
+
+    .website-nav__contacts__item {
+        margin-top: 26px;
+    }
+}
+
+@media screen and (max-width:1366px) {
+    .website-nav__footer {
+        margin-top: 150px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .website-nav__footer {
+        margin-top: 80px;
+    }
+
+    .website-nav__contacts {
+        font-size: 14px;
+    }
+
+    .website-nav__contacts__item {
+        margin-top: 20px;
+    }
+
+}
+
+@media screen and (max-width:768px) {
+    .website-nav__footer  {
+        text-align: center;
+        margin-top: 40px;
+    }
+}
+
+.website-nav__social {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: 3;
+    left: 0;
+}
+
+.website-nav__social__item {
+    float: left;
+    width: 25%;
+    border-right: 1px solid #9b9b9b;
+}
+
+.website-nav__social__item:last-child {
+    border: 0;
+}
+
+.website-nav__social__item_bg {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 100%;
+    padding-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width:1024px) {
+    .website-nav__social__item_bg {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .website-nav__social {
+        width: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 20px;
+    }
+}
+
+.facebook {
+    background-image: url(../images/facebook.png);
+}
+
+.twitter {
+    background-image: url(../images/twitter.png);
+}
+
+.pintrest {
+    background-image: url(../images/pintrest.png);
+}
+
+.instagram {
+    background-image: url(../images/instagram.png);
+}
