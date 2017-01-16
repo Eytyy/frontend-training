@@ -19,42 +19,17 @@
 // #4 Modules
 @import "components/main-nav";
 
-
-
-
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-@font-face {
-    font-family: Roboto-Regular;
-    src: url(../fonts/Roboto-Regular.ttf);
-}
-
-@font-face {
-    font-family: Roboto-Bold;
-    src: url(../fonts/Roboto-Bold.ttf);
-}
-
-@font-face {
-    font-family: Roboto-Black;
-    src: url(../fonts/Roboto-Black.ttf);
-}
-
-@font-face {
-    font-family: Roboto-Light;
-    src: url(../fonts/Roboto-Light.ttf);
-}
-
-
 body {
     width: 100%;
     max-height: 1920px;
     height: auto;
     margin:  0 auto;
     position: relative;
+}
+
+.multiply-blend-bg {
+    background-blend-mode: multiply;
+    background-color: #4A4A4A;
 }
 
 main {
@@ -110,7 +85,7 @@ main {
 }
 
 .section__main-title {
-    font-family: Roboto-Bold;
+    font-family: $Bold;
     font-size: 34px;
     line-height: 1.18;
     text-transform: uppercase;
@@ -148,7 +123,7 @@ main {
 }
 
 .section__excerpt {
-    font-family: Roboto-Light;
+    font-family: $Light;
     font-size: 40px;
     font-weight: 300;
     line-height: 44px;
@@ -158,7 +133,7 @@ main {
 }
 
 .section__desc {
-    font-family: Roboto-Light;
+    font-family: $Light;
     font-size: 24px;
     line-height: 34px;
     max-width: 521px;
@@ -256,7 +231,7 @@ main {
 }
 
 .services-list__item {
-    padding: 89px 0 91px 97px;
+    padding: 88px 0 88px 97px;
     border-bottom: solid 1px #9b9b9b;
 }
 
@@ -298,11 +273,12 @@ main {
 }
 
 .services-list__text {
-    font-family: Roboto-Bold;
+    font-family: $Bold;
     font-size: 35px;
     color: #414244;
     display: inline-block;
     vertical-align: middle;
+    line-height: 43px;
 }
 
 .services-list__text_small {
@@ -313,14 +289,14 @@ main {
 
 @media screen and (max-width:1680px) {
     .services-list__item {
-        padding: 68px 0 68px 70px;
+        padding: 71px 0 71px 70px;
     }
 }
 
 @media screen and (max-width:1440px) {
 
     .services-list__item {
-        padding: 63px 0 63px 70px;
+        padding: 59px 0 59px 70px;
     }
 
     .services-list__icon {
@@ -329,16 +305,18 @@ main {
 
     .services-list__text  {
         font-size: 28px;
+        line-height: 35px;
     }
 }
 
 @media screen and (max-width:1366px) {
     .services-list__item {
-        padding: 60px 0 59px 54px
+        padding: 58px 0 58px 54px
     }
 
      .services-list__text  {
         font-size: 24px;
+         line-height: 28px;
     }
 
      .services-list__text_small {
@@ -349,7 +327,7 @@ main {
 
 @media screen and (max-width:1280px) {
     .services-list__item {
-        padding: 48px 0 48px 40px;
+        padding: 56px 0 56px 40px;
     }
 
     .icon--cutting {
@@ -375,11 +353,12 @@ main {
 
 @media screen and (max-width:1024px) {
     .services-list__item {
-        padding: 42px 0 42px 25px;;
+        padding: 43px 0 43px 25px;;
     }
 
     .services-list__text {
         font-size: 18px;
+        line-height: 22px;
     }
 
     .services-list__text_small {
@@ -449,51 +428,62 @@ main {
     }
 }
 
-.section__col--services-details {
+.section__col--service-details {
     width: 16.71875%;
     height: auto;
-    background-image: url(../images/servicesDetails.jpg);
+    background-image: url(../images/service-side-bg.jpg);
     background-repeat: no-repeat;
     background-position: left;
     background-size: cover;
-
-}
-/*---------Our Process----------*/
-.website-section--our-process {
-    width: 83.333333333333%;
-    background-image: url(../images/process.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding-top: 55.67708333333311%;
-    position: relative;
-    height: auto;
-    background-blend-mode: multiply;
-    background-color: #575757;
-    clear: both;
+    padding-top: 55.85107421875%;
+    
+    @extend .multiply-blend-bg
 }
 
 @media screen and (max-width:768px) {
-    .website-section--our-process {
+    .section__col--service-details {
+        display: none;
+    }
+}
+
+
+/*---------Our Process----------*/
+
+.section__col--process-info {
+    width: 83.28125%;
+    background-image: url(../images/processBg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 55.85107421875%;
+    position: relative;
+    height: auto;
+    clear: both;
+    
+    @extend .multiply-blend-bg
+}
+
+@media screen and (max-width:768px) {
+    .section__col--process-info {
         width: 100%;
         padding-top: 75%;
     }
 }
 
 @media screen and (max-width:480px) {
-    .website-section--our-process {
+    .section__col--process-info {
         padding-top: 100%;
     }
 }
 
-.website-section-row--our-process {
+.section__col--process-info-wrapper {
     position: absolute;
     top: 0;
     z-index: 5;
     width: 100%;
 }
 
-.section__col--process-info {
+.section__col--process-info-header {
     margin-top: 179px;
     padding-left: 148px;
 
@@ -508,7 +498,7 @@ main {
 }
 
 @media screen and (max-width:1440px) {
-    .section__col--process-info {
+    .section__col--process-info-header {
         margin-top: 140px;
         padding-left: 80px;
     }
@@ -520,7 +510,7 @@ main {
 }
 
 @media screen and (max-width:1024px) {
-    .section__col--process-info {
+    .section__col--process-info-header {
         margin-top: 90px;
         padding-left: 40px;
     }
@@ -532,14 +522,13 @@ main {
 }
 
 @media screen and (max-width:736px) {
-    .section__col--process-info {
+    .section__col--process-info-header {
         padding-left: 20px;
-         margin-top: 45px;
+        margin-top: 45px;
     }
+
 }
-    .section__col--process-steps {
-        padding-left: 40px;
-}
+
 
 @media screen and (max-width:736px) {
     .section__col--process-steps {
@@ -594,6 +583,7 @@ main {
 .process-steps__text {
     font-family: Roboto-Bold;
     font-size: 34px;
+    line-height: 40px;
     color: #FFFFFF;
 }
 
@@ -611,12 +601,14 @@ main {
 @media screen and (max-width:1440px) {
     .process-steps__text {
          font-size: 30px;
+        line-height: 34px;
     }
 }
 
 @media screen and (max-width:1366px) {
     .process-steps__text {
          font-size: 26px;
+        line-height: 30px;
     }
 }
 
@@ -627,6 +619,7 @@ main {
 
     .process-steps__text {
         font-size: 22px;
+        line-height: 26px;
     }
 
     .process-steps__text:before {
@@ -691,10 +684,23 @@ main {
     }
     .process-steps__text {
         font-size: 16px;
+        line-height: 20px;
     }
 }
 
-/*---contact-----*/
+.section__col--process-details {
+    width: 16.71875%;
+    height: auto;
+    background-image: url(../images/process-side-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    padding-top: 55.85107421875%;
+    
+    @extend .multiply-blend-bg
+}
+
+/*----------------------------------------------------contact----------------------------------------*/
 
 .section__col--contatc-info {
     width: 44.0625%;
