@@ -459,6 +459,7 @@ main {
     position: relative;
     height: auto;
     clear: both;
+    z-index: 0;
     
     @extend .multiply-blend-bg
 }
@@ -581,7 +582,7 @@ main {
 }
 
 .process-steps__text {
-    font-family: Roboto-Bold;
+    font-family: $Bold;
     font-size: 34px;
     line-height: 40px;
     color: #FFFFFF;
@@ -695,9 +696,93 @@ main {
     background-repeat: no-repeat;
     background-position: left;
     background-size: cover;
+    position: relative;
     padding-top: 55.85107421875%;
     
     @extend .multiply-blend-bg
+}
+
+.section__col--process-details__inactive-info {
+    position: absolute;
+    top: 205px;
+    left: 36px;
+    padding-right: 70px;
+    color: #FFFFFF;
+}
+
+.section__side-title {
+    font-family: $Bold;
+    font-size: 34px;
+    line-height: 36px;
+    text-transform: uppercase;
+    margin-bottom: 23px;
+}
+
+.section__side-text {
+    font-family: $Light;
+    font-size: 22px;
+    line-height: 24px;
+}
+
+
+@media screen and (max-width:1680px) {
+    .section__col--process-details__inactive-info {
+        padding-right: 50px;
+    }
+}
+
+@media screen and (max-width:1440px) {
+    .section__col--process-details__inactive-info {
+        padding-right: 40px;
+        left: 26px;
+        top: 168px;
+    }
+    
+    .section__side-title {
+        font-size: 30px;
+        line-height: 32px;
+    }
+    
+    .section__side-text {
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width:1366px) {
+    .section__col--process-details__inactive-info {
+        padding-right: 35px;
+        top: 165px;
+    }
+    
+    .section__side-title {
+        font-size: 26px;
+        line-height: 32px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .section__col--process-details__inactive-info {
+        padding-right: 15px;
+        left: 20px;
+        top: 105px;
+    }
+    
+    .section__side-title {
+        font-size: 22px;
+        line-height: 26px;
+    }
+    
+    .section__side-text {
+        font-size: 16px;
+        line-height: 18px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .section__col--process-details {
+        display: none;
+    }
 }
 
 /*----------------------------------------------------contact----------------------------------------*/
@@ -714,7 +799,7 @@ main {
 }
 
 .section__info__item {
-    font-family: Roboto-Bold;
+    font-family: $Bold;
     font-size: 22px;
     color: #4A4A4A;
     letter-spacing: 0;
@@ -724,7 +809,7 @@ main {
 }
 
 .section__info__item_small {
-    font-family: Roboto-Regular;
+    font-family: $Regular;
     line-height: 30px;
 }
 
@@ -837,7 +922,7 @@ main {
 
 .section__form__input {
     width: 100%;
-    font-family: Roboto-Regular;
+    font-family: $Regular;
     font-size: 22px;
     color: #9B9B9B;
     border: 1px solid #9B9B9B;
