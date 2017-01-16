@@ -116,6 +116,8 @@
     }
 }
 
+
+
 .intro-component {
     position: absolute;
     left: 0;
@@ -138,7 +140,7 @@
 
 .intro-text {
     text-transform: uppercase;
-    font-family: $Bold;
+    font-family: Roboto-Bold;
     font-size: 60px;
     line-height: 64px;
     color: #ffffff;
@@ -234,7 +236,7 @@
     .intro-component {
         width: 50%;
     }
-    
+
     .intro-video__btn {
         width: 25px;
         height: 25px;

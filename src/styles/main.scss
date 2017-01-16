@@ -20,27 +20,56 @@
 @import "components/main-nav";
 
 
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url(../fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Black;
+    src: url(../fonts/Roboto-Black.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url(../fonts/Roboto-Light.ttf);
+}
+
+
+body {
+    width: 100%;
+    max-height: 1920px;
+    height: auto;
+    margin:  0 auto;
+    position: relative;
+}
+
 main {
     width: 100%;
     height: auto;
     float: left;
 }
 
-.website-section--our-services {
-    overflow: hidden;
-}
-
-.website-section--our-services-wrapper {
-    width: 144.322916666667%;
-    display: flex;
-}
-
-.section__col--services-info-container {
-    width: 44.0625%;
-    height: auto;
+.section__col {
+    float: left;
 }
 
 .section__col--services-info {
+    width: 44.0625%;
+    height: auto;
     padding: 116px 125px 0 148px;
 }
 
@@ -81,7 +110,7 @@ main {
 }
 
 .section__main-title {
-    font-family: $Bold;
+    font-family: Roboto-Bold;
     font-size: 34px;
     line-height: 1.18;
     text-transform: uppercase;
@@ -119,7 +148,7 @@ main {
 }
 
 .section__excerpt {
-    font-family: $Light;
+    font-family: Roboto-Light;
     font-size: 40px;
     font-weight: 300;
     line-height: 44px;
@@ -129,7 +158,7 @@ main {
 }
 
 .section__desc {
-    font-family: $Light;
+    font-family: Roboto-Light;
     font-size: 24px;
     line-height: 34px;
     max-width: 521px;
@@ -192,7 +221,7 @@ main {
         max-width: 450px;
         margin-bottom: 15px;
     }
-    
+
     .section__desc {
         font-size: 18px;
         line-height: 22px;
@@ -206,7 +235,7 @@ main {
         max-width: 450px;
         margin-bottom: 15px;
     }
-    
+
     .section__desc {
         font-size: 16px;
         line-height: 20px;
@@ -214,12 +243,9 @@ main {
     }
 }
 
-.section__col--services-list-container {
+.section__col--services-list {
     width: 39.21875%;
     height: auto;
-}
-
-.section__col--services-list {
     border-left: 1px solid #9b9b9b;
 }
 
@@ -272,12 +298,11 @@ main {
 }
 
 .services-list__text {
-    font-family: $Bold;
+    font-family: Roboto-Bold;
     font-size: 35px;
     color: #414244;
     display: inline-block;
     vertical-align: middle;
-    line-height: 43px;
 }
 
 .services-list__text_small {
@@ -398,11 +423,11 @@ main {
     .services-list__item {
         padding: 20px 0 19px 15px;
     }
-    
+
     .services-list__icon {
         margin-right: 10px;
     }
-    
+
     .icon--cutting {
         width: 67px;
         height: 62px;
@@ -433,38 +458,14 @@ main {
     background-size: cover;
 
 }
-
-.section__col--services-details-container {
-    width: 60.914760914761%;
-    height: auto;
-    background-image: url(../images/our-servicesBg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-color: #4A4A4A;
-    background-blend-mode: multiply;
-
-}
-
 /*---------Our Process----------*/
-
 .website-section--our-process {
-    overflow: hidden;
-    
-}
-
-.website-section--our-process-wrapper {
-    width: 144.194740914761%;
-    display: flex;
-}
-
-.section__col--process-info-container {
-    width: 83.5%;
+    width: 83.333333333333%;
     background-image: url(../images/process.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding-top: 38.7%;
+    padding-top: 55.67708333333311%;
     position: relative;
     height: auto;
     background-blend-mode: multiply;
@@ -473,19 +474,19 @@ main {
 }
 
 @media screen and (max-width:768px) {
-    .section__col--process-info-container {
+    .website-section--our-process {
         width: 100%;
         padding-top: 75%;
     }
 }
 
 @media screen and (max-width:480px) {
-    .section__col--process-info-container {
+    .website-section--our-process {
         padding-top: 100%;
     }
 }
 
-.section__col--process-info-data {
+.website-section-row--our-process {
     position: absolute;
     top: 0;
     z-index: 5;
@@ -536,13 +537,15 @@ main {
          margin-top: 45px;
     }
 }
+    .section__col--process-steps {
+        padding-left: 40px;
+}
 
-    
 @media screen and (max-width:736px) {
     .section__col--process-steps {
          padding-left: 20px;
         margin-top: 70px;
-    }  
+    }
 }
 
 .process-steps__item {
@@ -561,7 +564,7 @@ main {
     background-position: center;
     height: 60px;
 }
-    
+
 @media screen and (max-width:480px) {
     .process-steps__item {
         padding-right: 20px;
@@ -589,9 +592,8 @@ main {
 }
 
 .process-steps__text {
-    font-family: $Bold;
+    font-family: Roboto-Bold;
     font-size: 34px;
-    line-height: 40px;
     color: #FFFFFF;
 }
 
@@ -630,19 +632,19 @@ main {
     .process-steps__text:before {
         margin-top: 10px;
     }
-    
+
     .design:before {
         width: 50px;
     }
-    
+
     .development:before {
         width: 51px;
     }
-    
+
     .quotation:before {
         width: 49px;
     }
-    
+
     .production:before {
         width: 40px;
     }
@@ -659,24 +661,24 @@ main {
     .process-steps__text {
         font-size: 18;
     }
-    
+
     .process-steps__item:before {
         height: 50px;
         margin-top: -60px;
     }
-    
+
     .design:before {
         width: 42px;
     }
-    
+
     .development:before {
         width: 44px;
     }
-    
+
     .quotation:before {
         width: 42px;
     }
-    
+
     .production:before {
         width: 35px;
     }
@@ -690,17 +692,6 @@ main {
     .process-steps__text {
         font-size: 16px;
     }
-}
-
-.section__col--process-details-container {
-    width: 60.914760914761%;
-    height: auto;
-    background-image: url(../images/our-servicesBg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-color: #4A4A4A;
-    background-blend-mode: multiply;
 }
 
 /*---contact-----*/
@@ -717,7 +708,7 @@ main {
 }
 
 .section__info__item {
-    font-family: $Bold;
+    font-family: Roboto-Bold;
     font-size: 22px;
     color: #4A4A4A;
     letter-spacing: 0;
@@ -727,7 +718,7 @@ main {
 }
 
 .section__info__item_small {
-    font-family: $Regular;
+    font-family: Roboto-Regular;
     line-height: 30px;
 }
 
@@ -773,7 +764,7 @@ main {
         padding: 40px 0 0 40px;
     }
 }
-    
+
 @media screen and (max-width:768px) {
    .section__col--contatc-info {
         padding: 40px 0 0 40px;
@@ -790,7 +781,7 @@ main {
     width: 100%;
     border-top: 1px solid #9B9B9B;
     padding-top: 44px;
-    font-family: $Regular;
+    font-family: Roboto-Regular;
     font-size: 22px;
     color: #9B9B9B;
     line-height: 25px;
@@ -827,7 +818,7 @@ main {
 }
 
 .section__form__title {
-    font-family: $Bold;
+    font-family: Roboto-Bold;
     font-size: 34px;
     color: #535456;
 }
@@ -840,7 +831,7 @@ main {
 
 .section__form__input {
     width: 100%;
-    font-family: $Regular;
+    font-family: Roboto-Regular;
     font-size: 22px;
     color: #9B9B9B;
     border: 1px solid #9B9B9B;
@@ -961,12 +952,12 @@ main {
     .section__col--conatct-form {
        padding: 40px 100px 80px 20px;
     }
-    
+
     .section__form {
         margin-top: 20px;
     }
 }
-    
+
 @media screen and (max-width:480px) {
     .section__col--conatct-form {
        padding: 40px 40px 80px 20px;

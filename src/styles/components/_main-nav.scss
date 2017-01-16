@@ -11,7 +11,6 @@
     width: 16.71875%;
     display: block;
     background-color: #fff;
-    display: none;
 }
 
 .website-nav__close-icon {
@@ -26,7 +25,7 @@
     list-style-type: none;
     padding: 0;
     margin: 152px 0 0 54px;
-    font-family: $Bold;
+    font-family: Roboto-Bold;
     text-transform: uppercase;
 }
 
@@ -79,10 +78,10 @@
 }
 
 @media screen and (max-width:768px) {
-    .website-nav {
+    .website-nav-active {
         width: 100%;
     }
-    
+
     .website-nav__close-icon {
         top: 30px;
     }
@@ -93,8 +92,6 @@
     }
 }
 
-
-
 .website-nav__main-menu__item_selected {
     color: #e21318;
 }
@@ -104,7 +101,7 @@
 }
 
 .website-nav__contacts {
-    font-family: $Bold;
+    font-family: Roboto-Bold;
     font-size: 16px;
     color: #4a4a4a;
     margin-left: 54px;
@@ -116,7 +113,7 @@
 }
 
 .website-nav__contacts__item_small {
-    font-family: $Regular;
+    font-family: Roboto-Regular;
     margin-top: 1px;
 }
 
