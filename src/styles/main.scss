@@ -40,7 +40,12 @@ main {
     height: auto;
     padding: 116px 125px 0 148px;
 }
+//active statse
+.section__col--services-info_active {
+    display: none;
+}
 
+//end of active state 
 
 @media screen and (max-width:1440px) {
     .section__col--services-info {
@@ -63,13 +68,13 @@ main {
 @media screen and (max-width:768px) {
     .section__col--services-info {
         width: 100%;
-        padding: 40px 40px 0 40px;
+        padding: 40px 40px 20px 40px;
     }
 }
 
 @media screen and (max-width:736px) {
     .section__col--services-info {
-        padding: 40px 40px 0 20px;
+        padding: 40px 40px 20 20px;
     }
 }
 
@@ -317,7 +322,6 @@ main {
     }
 }
 
-
 @media screen and (max-width:1280px) {
     .services-list__item {
         padding: 56px 0 56px 40px;
@@ -381,9 +385,6 @@ main {
 }
 
 @media screen and (max-width:768px) {
-    .section__col--services-list {
-        margin-top: 20px;
-    }
     .services-list__item {
         padding: 24px 0 23px 35px;
         border-bottom: 0;
@@ -429,7 +430,7 @@ main {
     background-position: left;
     background-size: cover;
     padding-top: 55.85107421875%;
-    
+    position: relative;
     @extend .multiply-blend-bg;
 }
 
@@ -438,6 +439,54 @@ main {
         display: none;
     }
 }
+
+.section__col--service-details__info-wrapper {
+    display: none;
+}
+
+//////////active state///////////
+
+.section__col--service-details_active {
+    width: 60.78%;
+     @extend .section__col--service-details;
+    
+    @extend .multiply-blend-bg;
+}
+
+.section__col--service-details__info-wrapper_active {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 4;
+}
+
+.details-section-close {
+    float: right;
+    margin: 41px 61px 0 0;
+    cursor: pointer;
+}
+
+.our-services-details-text {
+    margin: 112px 0 0 133px;
+    width: 65%;
+}
+
+@media screen and (max-width:1440px) {
+    .our-services-details-text {
+        margin: 90px 0 0 90px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .our-services-details-text {
+        margin: 80px 0 0 40px;
+    }
+}
+
+//////////active state///////////
+
 
 
 /*---------Our Process----------*/
@@ -522,7 +571,6 @@ main {
     }
 
 }
-
 
 @media screen and (max-width:736px) {
     .section__col--process-steps {
@@ -834,12 +882,12 @@ main {
 
     .section__info__item{
         margin-bottom: 15px;
-        font-size: 16px;
-        line-height: 18px;
+        font-size: 14px;
+        line-height: 16px;
     }
 
     .section__info__item_small {
-        line-height: 24px;
+        line-height: 20px;
     }
 }
 
@@ -899,11 +947,11 @@ main {
     width: 39.21875%;
     height: auto;
     border-left: 1px solid #9b9b9b;
-    padding: 141px 91px 200px 87px;
+    padding: 141px 91px 223px 87px;
 }
 
 .section__form__title {
-    font-family: Roboto-Bold;
+    font-family: $Bold;
     font-size: 34px;
     color: #535456;
 }
@@ -1070,7 +1118,8 @@ main {
     content: '';
     top: 0;
     bottom: 0;
-    left: 0;position: absolute;
+    left: 0;
+    position: absolute;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.6);
