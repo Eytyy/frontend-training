@@ -793,6 +793,17 @@ main {
     height: 100%;
 }
 
+.section__col--process-details__info-content_is-active:after {
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 3;
+}
 
 .process-details__steps {
     width: 100%;
@@ -806,6 +817,32 @@ main {
     border-right: 1px solid #FFFFFF;
     height: 100%;
     padding: 118px 30px 0 44px;
+}
+
+@media screen and (max-width:1440px) {
+    .process-details__steps__item {
+        padding: 80px 20px 20px 25px;
+    }
+}
+
+
+@media screen and (max-width:1280px) {
+    .process-details__steps__item {
+        padding: 50px 18px 15px 20px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .process-details__steps {
+        height: auto;
+    }
+    
+    .process-details__steps__item {
+        width: 100%;
+        padding: 20px 100px 20px 45px;
+        height: auto;
+        border-bottom: 1px solid #ffffff;
+    }
 }
 
 .process-details__steps__item:last-child {
@@ -843,10 +880,86 @@ main {
     line-height: 22px;
 }
 
+@media screen and (max-width:1440px) {
+    .number {
+        margin-bottom: 28px;
+        font-size: 45px;
+        line-height: 50px;
+    }
+    
+    .process-details__steps__item__icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .process-details__steps__item__title {
+        font-size: 28px;
+        line-height: 32px;
+    }
+    
+    .process-details__steps__item__desc {
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width:1280px) {
+    .number {
+        margin-bottom: 28px;
+        font-size: 40px;
+        line-height: 45px;
+    }
+    
+    .process-details__steps__item__icon {
+        width: 45px;
+        height: 45px;
+    }
+    
+    .process-details__steps__item__title {
+        font-size: 24px;
+        line-height: 28px;
+        margin: 15px 0;
+    }
+    
+    .process-details__steps__item__desc {
+        font-size: 18px;
+        line-height: 20px;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .number {
+        font-size: 30px;
+        line-height: 32px;
+        margin-bottom: 0px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    .process-details__steps__item__icon {
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+        margin: 0 8px;
+    }
+    
+    .process-details__steps__item__title {
+        font-size: 22px;  
+        line-height: 22px;
+        margin: 0;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+     .process-details__steps__item__desc {
+        font-size: 16px;
+        line-height: 18px;
+         margin-top: 10px;
+    }
+}
+
 
 /////end of actiev state/////
-
-
 
 .section__side-title {
     font-family: $Bold;
