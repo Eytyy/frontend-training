@@ -768,14 +768,18 @@ main {
 .section__col--process-details_is-active {
     width: 60.78%;
     position: absolute;
-    
-    @extend .section__col--process-details;
+    background-image: url(../images/process-side-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
     padding: 0;
     height: 100%;
     top: 0;
     right: 0;
     bottom: 0;
     z-index: 5;
+    
+    @extend .multiply-blend-bg
 }
 
 .section__col--process-details__info_is-active {
@@ -840,6 +844,20 @@ main {
     .process-details__steps__item {
         width: 100%;
         padding: 20px 100px 20px 45px;
+        height: auto;
+        border-bottom: 1px solid #ffffff;
+        border-right: 0;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .process-details__steps {
+        height: auto;
+    }
+    
+    .process-details__steps__item {
+        width: 100%;
+        padding: 15px 30px 20px 30px;
         height: auto;
         border-bottom: 1px solid #ffffff;
     }
@@ -955,6 +973,37 @@ main {
         font-size: 16px;
         line-height: 18px;
          margin-top: 10px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .number {
+        font-size: 26px;
+        line-height: 28px;
+        margin-bottom: 0px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    .process-details__steps__item__icon {
+        width: 35px;
+        height: 35px;
+        vertical-align: middle;
+        margin: 0 8px;
+    }
+    
+    .process-details__steps__item__title {
+        font-size: 20px;  
+        line-height: 20px;
+        margin: 0;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+     .process-details__steps__item__desc {
+        font-size: 16px;
+        line-height: 18px;
+         margin-top: 8px;
     }
 }
 
@@ -1127,7 +1176,7 @@ main {
     width: 100%;
     border-top: 1px solid #9B9B9B;
     padding-top: 44px;
-    font-family: Roboto-Regular;
+    font-family: $Regular;
     font-size: 22px;
     color: #9B9B9B;
     line-height: 25px;
@@ -1333,6 +1382,13 @@ main {
     height: auto;
     padding-top: 55.85107421875%;
     position: relative;
+}
+
+@media screen and (max-width:768px) {
+    .section__col--contact-details_is-active {
+        width: 100%;
+        margin-top: 15px;
+    }
 }
 
 .section__col--contact-details__info_is-active {
