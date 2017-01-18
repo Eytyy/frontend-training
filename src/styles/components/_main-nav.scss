@@ -2,7 +2,7 @@
     display: none;
 }
 
-.website-nav-active {
+.website-nav_is-active {
     position: absolute;
     right: 0;
     top: 0;
@@ -81,7 +81,7 @@
 }
 
 @media screen and (max-width:768px) {
-    .website-nav-active {
+    .website-nav_is-active {
         width: 100%;
     }
 

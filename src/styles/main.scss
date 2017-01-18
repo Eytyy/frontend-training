@@ -41,7 +41,7 @@ main {
     padding: 116px 125px 0 148px;
 }
 //active statse
-.section__col--services-info_active {
+.section__col--services-info_is-active {
     display: none;
 }
 
@@ -446,14 +446,14 @@ main {
 
 //////////active state///////////
 
-.section__col--service-details_active {
+.section__col--service-details_is-active {
     width: 60.78%;
-     @extend .section__col--service-details;
+    @extend .section__col--service-details;
     
     @extend .multiply-blend-bg;
 }
 
-.section__col--service-details__info-wrapper_active {
+.section__col--service-details__info-wrapper_is-active {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -485,11 +485,22 @@ main {
     }
 }
 
-//////////active state///////////
+//////////end of active state///////////
 
 
 
 /*---------Our Process----------*/
+
+.website-section--our-services {
+     position: relative;
+    width: 100%;
+    float: left;
+}
+.website-section--our-process {
+    position: relative;
+    width: 100%;
+    float: left;
+}
 
 .section__col--process-info {
     width: 83.28125%;
@@ -743,7 +754,7 @@ main {
     @extend .multiply-blend-bg
 }
 
-.section__col--process-details__inactive-info {
+.section__col--process-details__info {
     position: absolute;
     top: 205px;
     left: 36px;
@@ -751,6 +762,91 @@ main {
     color: #FFFFFF;
     z-index: 2;
 }
+
+//////ative state/////
+
+.section__col--process-details_is-active {
+    width: 60.78%;
+    position: absolute;
+    
+    @extend .section__col--process-details;
+    padding: 0;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+}
+
+.section__col--process-details__info_is-active {
+    display: none;
+}
+
+
+.section__col--process-details__info-content {
+    display: none;
+}
+
+.section__col--process-details__info-content_is-active {
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+
+.process-details__steps {
+    width: 100%;
+    position: relative;
+    height: 100%;
+}
+
+.process-details__steps__item {
+    width: 25%;
+    float: left;
+    border-right: 1px solid #FFFFFF;
+    height: 100%;
+    padding: 118px 30px 0 44px;
+}
+
+.process-details__steps__item:last-child {
+    border: none;
+}
+
+.number {
+    font-family: $Black;
+    font-size: 50px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 58px;
+    margin-bottom: 39px;
+    display: block;
+}
+
+.process-details__steps__item__icon {
+    width: 70px;
+    height: 70px;
+}
+
+.process-details__steps__item__title {
+    font-family: $Bold;
+    font-size: 32.24px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+    line-height: 34px;
+    margin: 20px 0;
+}
+
+.process-details__steps__item__desc {
+    font-family: Roboto-Light;
+    font-size: 20.86px;
+    color: #FFFFFF;
+    line-height: 22px;
+}
+
+
+/////end of actiev state/////
+
+
 
 .section__side-title {
     font-family: $Bold;
@@ -768,13 +864,13 @@ main {
 
 
 @media screen and (max-width:1680px) {
-    .section__col--process-details__inactive-info {
+    .section__col--process-details__info {
         padding-right: 50px;
     }
 }
 
 @media screen and (max-width:1440px) {
-    .section__col--process-details__inactive-info {
+    .section__col--process-details__info {
         padding-right: 40px;
         left: 26px;
         top: 168px;
@@ -792,7 +888,7 @@ main {
 }
 
 @media screen and (max-width:1366px) {
-    .section__col--process-details__inactive-info {
+    .section__col--process-details__info {
         padding-right: 35px;
         top: 165px;
     }
@@ -804,7 +900,7 @@ main {
 }
 
 @media screen and (max-width:1024px) {
-    .section__col--process-details__inactive-info {
+    .section__col--process-details__info {
         padding-right: 15px;
         left: 20px;
         top: 105px;
@@ -1140,7 +1236,7 @@ main {
 }
 
 .section__col--contact-details__info {
-    @extend .section__col--process-details__inactive-info;
+    @extend .section__col--process-details__info;
 }
 
 .section__side-text__icon {
