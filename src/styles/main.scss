@@ -1044,6 +1044,10 @@ main {
     padding: 116px 0 0 148px;
 }
 
+.section__col--contatc-info_is-active {
+    width: 39.22%;
+}
+
 .section__info {
     margin-top: 57px;
     height: auto;
@@ -1158,6 +1162,14 @@ main {
     border-left: 1px solid #9b9b9b;
     padding: 141px 91px 223px 87px;
 }
+
+/////Active/////
+
+.section__col--conatct-form_is-active {
+    display: none;
+}
+
+/////active/////
 
 .section__form__title {
     font-family: $Bold;
@@ -1312,6 +1324,21 @@ main {
     padding-top: 55.85107421875%;
     position: relative;
 }
+
+
+////active state/////
+
+.section__col--contact-details_is-active {
+    width: 60.78%;
+    height: auto;
+    padding-top: 55.85107421875%;
+    position: relative;
+}
+
+.section__col--contact-details__info_is-active {
+    display: none;
+}
+///active /////
 
 .section__col--contact-details__map {
     position: absolute;
