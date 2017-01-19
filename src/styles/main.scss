@@ -20,6 +20,8 @@
 @import "components/main-nav";
 
 
+
+
 .multiply-blend-bg {
     background-blend-mode: multiply;
     background-color: #4A4A4A;
@@ -40,12 +42,14 @@ main {
     height: auto;
     padding: 116px 125px 0 148px;
 }
-//active statse
+
+///////////active state/////////
+
 .section__col--services-info_is-active {
     display: none;
 }
 
-//end of active state 
+///////////end of active state///////// 
 
 @media screen and (max-width:1440px) {
     .section__col--services-info {
@@ -324,7 +328,7 @@ main {
 
 @media screen and (max-width:1280px) {
     .services-list__item {
-        padding: 56px 0 56px 40px;
+        padding: 55px 0 56px 40px;
     }
 
     .icon--cutting {
@@ -782,10 +786,15 @@ main {
     @extend .multiply-blend-bg
 }
 
+@media screen and (max-width:736px) {
+    .section__col--process-details_is-active {
+        width: 100%;
+    }
+}
+
 .section__col--process-details__info_is-active {
     display: none;
 }
-
 
 .section__col--process-details__info-content {
     display: none;
@@ -1189,6 +1198,13 @@ main {
     }
 }
 
+@media screen and (max-width:1280px) {
+    .section__copyright {
+        padding-top: 18px;
+        font-size: 18px;
+    }
+}
+
 @media screen and (max-width:1024px) {
     .section__copyright {
         font-size: 16px;
@@ -1374,7 +1390,6 @@ main {
     position: relative;
 }
 
-
 ////active state/////
 
 .section__col--contact-details_is-active {
@@ -1418,12 +1433,15 @@ main {
     z-index: 3;
 }
 
+.clear-overlay_is-active:after {
+    content: none;
+}
+
 @media screen and (max-width:768px) {
     .section__col--contact-details {
         display: none;
     }
 }
-
 
 @media screen and (max-width:1280px) {
     .section__col--contact-details {
