@@ -2,6 +2,15 @@
     width: 44.0625%;
     height: auto;
     padding: 116px 0 0 148px;
+    
+    @include respond-to(larg-screen) {padding: 96px 0 0 80px;}
+    @include respond-to(l-tablet) {padding: 68px 0 0 40px;}
+    @include respond-to(p-tablet) {
+        width: 100%;
+        padding: 40px 0 0 40px;
+    }
+    
+    @include respond-to(larg-mobile) {padding: 40px 0 0 20px;}
 }
 
 .section__col--contatc-info_is-active {
@@ -11,6 +20,9 @@
 .section__info {
     margin-top: 57px;
     height: auto;
+    
+    @include respond-to(larg-screen) {margin-top: 47px;}
+    @include respond-to(l-tablet) {margin-top: 30px;}
 }
 
 .section__info__item {
@@ -21,67 +33,26 @@
     margin-bottom: 40px;
     line-height: 25px;
     display: block;
+    
+    @include respond-to(larg-screen) {
+        margin-bottom: 25px;
+        font-size: 20px;
+    }
+    
+    @include respond-to(l-tablet) {
+        margin-bottom: 15px;
+        font-size: 14px;
+        line-height: 16px;
+    }
 }
 
 .section__info__item_small {
     font-family: $Regular;
     line-height: 30px;
+    
+    @include respond-to(l-tablet) {line-height: 20px;}
 }
 
-@media screen and (max-width:1440px) {
-
-    .section__col--contatc-info {
-        padding: 96px 0 0 80px;
-    }
-
-    .section__info {
-        margin-top: 47px;
-    }
-
-    .section__info__item {
-        margin-bottom: 25px;
-        font-size: 20px;
-    }
-}
-
-@media screen and (max-width:1024px) {
-    .section__col--contatc-info {
-        padding: 68px 0 0 40px;
-    }
-
-    .section__info {
-        margin-top: 30px;
-    }
-
-    .section__info__item{
-        margin-bottom: 15px;
-        font-size: 14px;
-        line-height: 16px;
-    }
-
-    .section__info__item_small {
-        line-height: 20px;
-    }
-}
-
-@media screen and (max-width:768px) {
-   .section__col--contatc-info {
-        width: 100%;
-        padding: 40px 0 0 40px;
-    }
-}
-
-@media screen and (max-width:768px) {
-   .section__col--contatc-info {
-        padding: 40px 0 0 40px;
-    }
-}
-
-@media screen and (max-width:736px) {
-   .section__col--contatc-info {
-        padding: 40px 0 0 20px;
-    }
-}
 
 .section__copyright {
     width: 100%;
@@ -91,35 +62,24 @@
     font-size: 22px;
     color: #9B9B9B;
     line-height: 25px;
-}
-
-@media screen and (max-width:1440px) {
-    .section__copyright {
+    
+    @include respond-to(larg-screen) {
         padding-top: 38px;
         font-size: 20px;
     }
-}
-
-@media screen and (max-width:1280px) {
-    .section__copyright {
+    
+    @include respond-to(small-screen) {
         padding-top: 18px;
         font-size: 18px;
     }
-}
-
-@media screen and (max-width:1024px) {
-    .section__copyright {
+    
+    @include respond-to(l-tablet) {
         font-size: 16px;
         line-height: 20px;
         padding-top: 26px;
     }
-}
-
-
-@media screen and (max-width:768px) {
-    .section__copyright {
-        display: none;
-    }
+    
+    @include respond-to(p-tablet) {display: none;}
 }
 
 
@@ -128,19 +88,38 @@
     height: auto;
     border-left: 1px solid #9b9b9b;
     padding: 141px 91px 223px 87px;
+     
+    @include respond-to(larg-screen) {padding: 127px 87px 142px 70px;}
+    @include respond-to(medium-screen) {padding: 125px 70px 110px 54px;}
+    @include respond-to(small-screen) {padding: 128px 60px 134px 40px;}
+    @include respond-to(l-tablet) {padding: 80px 40px 90px 25px;}
+    
+    @include respond-to(p-tablet) {
+       width: 100%;
+       padding: 40px 100px 80px 40px;
+    }
+    
+    @include respond-to(larg-mobile) {padding: 40px 100px 80px 20px;}
+    @include respond-to(medium-mobile) {padding: 40px 40px 80px 20px;}
 }
-
-
+ 
 .section__form__title {
     font-family: $Bold;
     font-size: 34px;
     color: #535456;
+    
+    @include respond-to(larg-screen) {font-size: 30px;}
+    @include respond-to(medium-screen) {font-size: 26px;}
+    @include respond-to(l-tablet) {font-size: 22px;}
 }
 
 .section__form {
     margin-top: 66px;
     width: 100%;
     height: auto;
+    
+    @include respond-to(larg-screen) {margin-top: 40px;}
+    @include respond-to(larg-mobile) {margin-top: 20px;}
 }
 
 .section__form__input {
@@ -150,16 +129,40 @@
     color: #9B9B9B;
     border: 1px solid #9B9B9B;
     border-radius: 0;
+    
+    @include respond-to(larg-screen) {font-size: 18px;}
+    @include respond-to(l-tablet) {font-size: 16px;}
 }
 
 .section__form__input_small {
     padding: 32px 0 29px 18px;
     margin-bottom: 41px;
+    
+    @include respond-to(larg-screen) {
+        padding: 28px 0 25px 18px;
+        margin-bottom: 31px;
+    }
+    
+    @include respond-to(medium-screen) {padding: 24px 0 22px 18px;}
+    @include respond-to(l-tablet) {
+        padding: 18px 0 17px 18px;
+        margin-bottom: 20px;
+    }
 }
 
 .section__form__input_big {
     padding: 20px 0 190px 18px;
     margin-bottom: 39px;
+    
+    @include respond-to(larg-screen) {
+        padding: 18px 0 120px 18px;
+        margin-bottom: 25px;
+    }
+    
+    @include respond-to(medium-screen) {
+        padding: 18px 0 130px 18px;
+        margin-bottom: 25px;
+    }
 }
 
 .section__form__input__btn {
@@ -167,124 +170,22 @@
     border: 0;
     padding: 31px 0 30px 0;
     color: #FFFFFF;
+    
+    @include respond-to(larg-screen) {padding: 28px 0 25px 0;}
+    @include respond-to(medium-screen) {padding: 25px 0 23px 0;}
+    @include respond-to(l-tablet) {padding: 18px 0 17px 0;}
 }
 
-@media screen and (max-width:1440px) {
-    .section__col--conatct-form {
-        padding: 127px 87px 142px 70px;
-    }
-
-    .section__form__title {
-        font-size: 30px;
-    }
-
-    .section__form {
-        margin-top: 40px;
-    }
-
-    .section__form__input {
-        font-size: 18px;
-    }
-
-    .section__form__input_small {
-        padding: 28px 0 25px 18px;
-        margin-bottom: 31px;
-    }
-
-    .section__form__input_big {
-        padding: 18px 0 120px 18px;
-        margin-bottom: 25px;
-    }
-
-    .section__form__input__btn {
-        padding: 28px 0 25px 0;
-    }
-
-}
-
-@media screen and (max-width:1366px) {
-    .section__col--conatct-form {
-        padding: 125px 70px 110px 54px;
-    }
-
-    .section__form__title {
-        font-size: 26px;
-    }
-
-    .section__form__input_small {
-        padding: 24px 0 22px 18px;
-    }
-
-    .section__form__input_big {
-        padding: 18px 0 130px 18px;
-        margin-bottom: 25px;
-    }
-
-    .section__form__input__btn {
-        padding: 25px 0 23px 0;
-    }
-
-}
-
-@media screen and (max-width:1280px) {
-    .section__col--conatct-form {
-       padding: 128px 60px 134px 40px;
-    }
-}
-
-@media screen and (max-width:1024px) {
-    .section__col--conatct-form {
-       padding: 80px 40px 90px 25px;
-    }
-
-      .section__form__title {
-        font-size: 22px;
-    }
-
-    .section__form__input {
-        font-size: 16px;
-    }
-
-    .section__form__input_small {
-        padding: 18px 0 17px 18px;
-        margin-bottom: 20px;
-    }
-
-    .section__form__input__btn {
-        padding: 18px 0 17px 0;
-    }
-}
-
-@media screen and (max-width:768px) {
-   .section__col--conatct-form {
-        width: 100%;
-       padding: 40px 100px 80px 40px;
-    }
-}
-
-@media screen and (max-width:736px) {
-    .section__col--conatct-form {
-       padding: 40px 100px 80px 20px;
-    }
-
-    .section__form {
-        margin-top: 20px;
-    }
-}
-
-@media screen and (max-width:480px) {
-    .section__col--conatct-form {
-       padding: 40px 40px 80px 20px;
-    }
-}
 
 .section__col--contact-details {
     width: 16.71875%;
     height: auto;
     padding-top: 55.85107421875%;
     position: relative;
+    
+    @include respond-to(small-screen) {padding-top: 61.7%;}
+    @include respond-to(p-tablet) {display: none;}
 }
-
 
 
 .section__col--contact-details__map {
@@ -313,18 +214,6 @@
     content: none;
 }
 
-@media screen and (max-width:768px) {
-    .section__col--contact-details {
-        display: none;
-    }
-}
-
-@media screen and (max-width:1280px) {
-    .section__col--contact-details {
-        padding-top: 61.7%;  
-    }
-}
-
 .section__col--contact-details__info {
     @extend .section__col--process-details__info;
 }
@@ -332,29 +221,21 @@
 .section__side-text__icon {
     position: relative;
     top: 31px;
+    
+    @include respond-to(larg-screen) {top: 25px;}
+    @include respond-to(l-tablet) {top: 20px;}
 }
 
 .pin-icon {
     width:64px;
     height: 82px;
-}
-
-@media screen and (max-width:1440px) {
-    .section__side-text__icon {
-        top: 25px;
-    }
-    .pin-icon {
+    
+    @include respond-to(larg-screen) {
         width:54px;
         height: 72px;
     }
-}
-
-@media screen and (max-width:1024px) {
-    .section__side-text__icon {
-        top: 20px;
-    }
     
-    .pin-icon {
+    @include respond-to(l-tablet) {
         width:44px;
         height: 62px;
     }
