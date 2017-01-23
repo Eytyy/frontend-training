@@ -34,4 +34,8 @@
      @else if $media == larg-screen {
         @media screen and (max-width:1440px) {@content;}
     }
+    
+     @else if $media == xlarg-screen {
+        @media screen and (max-width:1680px) {@content;}
+    }
 }
