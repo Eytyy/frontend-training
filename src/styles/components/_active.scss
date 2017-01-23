@@ -11,9 +11,37 @@
 
 .section__col--service-details_is-active {
     width: 60.78%;
-    @extend .section__col--service-details;
+    height: auto;
+    background-image: url(../images/service-side-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    padding-top: 55.85107421875%;
+    position: relative;
     
     @extend .multiply-blend-bg;
+}
+
+@media screen and (max-width:768px) {
+    .section__col--service-details_is-active {
+       position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 60.8%;
+        z-index: 10;
+    }
+}
+
+@media screen and (max-width:736px) {
+    .section__col--service-details_is-active {
+       position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        z-index: 10;
+    }
 }
 
 .section__col--service-details__info-wrapper_is-active {
@@ -22,7 +50,8 @@
     height: 100%;
     left: 0;
     top: 0;
-    z-index: 4;
+    bottom: 0;
+    z-index: 10;
 }
 
 .details-section-close {
@@ -45,6 +74,20 @@
 @media screen and (max-width:1024px) {
     .our-services-details-text {
         margin: 80px 0 0 40px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .our-services-details-text {
+        margin: 40px 0 0 20px;
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:736px) {
+    .our-services-details-text {
+        margin: 80px 0 0 20px;
+        width: 75%;
     }
 }
 
@@ -151,9 +194,21 @@
     
     .process-details__steps__item {
         width: 100%;
-        padding: 15px 30px 20px 30px;
+        padding: 20px 30px 20px 20px;
         height: auto;
         border-bottom: 1px solid #ffffff;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .process-details__steps__item {
+        padding: 15px 20px 15px 20px;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .process-details__steps__item {
+        padding: 10px 20px 10px 20px;
     }
 }
 
@@ -295,9 +350,9 @@
     }
     
      .process-details__steps__item__desc {
-        font-size: 16px;
-        line-height: 18px;
-         margin-top: 8px;
+        font-size: 14px;
+        line-height: 16px;
+         margin-top: 5px;
     }
 }
 
