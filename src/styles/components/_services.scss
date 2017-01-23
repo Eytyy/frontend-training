@@ -9,42 +9,23 @@
     width: 44.0625%;
     height: auto;
     padding: 116px 125px 0 148px;
-}
-
-
-@media screen and (max-width:1440px) {
-    .section__col--services-info {
-        padding: 96px 50px 0 80px;
-    }
-}
-
-@media screen and (max-width:1366px) {
-    .section__col--services-info {
-        padding: 100px 50px 0 80px;
-    }
-}
-
-@media screen and (max-width:1024px) {
-    .section__col--services-info {
-        padding: 68px 40px 0 40px;
-    }
-}
-
-@media screen and (max-width:768px) {
-    .section__col--services-info {
+    
+    @include respond-to(larg-screen) {padding: 96px 50px 0 80px;}
+    @include respond-to(medium-screen) { padding: 100px 50px 0 80px;}
+    @include respond-to(l-tablet) {padding: 68px 40px 0 40px;}
+    @include respond-to(p-tablet) {
         width: 100%;
         padding: 40px 40px 20px 40px;
     }
+    
+    @include respond-to(larg-mobile) {padding: 40px 40px 20px 20px;}
 }
 
-@media screen and (max-width:736px) {
-    .section__col--services-info {
-        padding: 40px 40px 20px 20px;
-    }
-}
 
 .section__header {
     margin-bottom: 20px;
+    
+    @include respond-to(medium-mobile) {margin-bottom: 10px;}
 }
 
 .section__main-title {
@@ -53,6 +34,10 @@
     line-height: 1.18;
     text-transform: uppercase;
     text-align: left;
+    
+    @include respond-to(larg-screen) {font-size: 30px;}
+    @include respond-to(medium-screen) {font-size: 26px;}
+    @include respond-to(l-tablet) {font-size: 22px;}
 }
 
 .section__main-title:before {
@@ -62,17 +47,9 @@
     background-color: #E21318;
     display: block;
     margin-bottom: 20px;
-}
-
-@media screen and (max-width:1024px) {
-    .section__main-title:before {
+    
+    @include respond-to(l-tablet) {
         height: 3px;
-        margin-bottom: 10px;
-    }
-}
-
-@media screen and (max-width:480px) {
-    .section__header {
         margin-bottom: 10px;
     }
 }
@@ -85,6 +62,7 @@
     color: #4a4a4a;
 }
 
+
 .section__excerpt {
     font-family: $Light;
     font-size: 40px;
@@ -93,88 +71,68 @@
     text-align: left;
     margin-bottom: 26px;
     max-width: 562px;
+    
+    @include respond-to(larg-screen) {
+        font-size: 32px;
+        line-height: 38px;
+        max-width: 450px;
+    }
+    
+    @include respond-to(medium-screen) {
+         font-size: 30px;
+        line-height: 34px;
+    }
+    
+    @include respond-to(l-tablet) {
+         font-size: 24px;
+        line-height: 28px;
+        max-width: 350px;
+    }
+    
+    @include respond-to(larg-mobile) {
+        font-size: 22px;
+        line-height: 24px;
+        max-width: 450px;
+        margin-bottom: 15px;
+    }
+    
+    @include respond-to(medium-mobile) {
+        font-size: 20px;
+        line-height: 22px;
+        max-width: 450px;
+        margin-bottom: 15px;
+    }
 }
+
+
 
 .section__desc {
     font-family: $Light;
     font-size: 24px;
     line-height: 34px;
     max-width: 521px;
-}
-
-@media screen and (max-width:1440px) {
-    .section__main-title  {
-        font-size: 30px;
-    }
-
-    .section__excerpt {
-        font-size: 32px;
-        line-height: 38px;
-        max-width: 450px;
-    }
-
-    .section__desc {
+    
+    @include respond-to(larg-screen) {
         font-size: 20px;
         line-height: 28px;
     }
-}
-
-@media screen and (max-width:1366px) {
-    .section__main-title {
-        font-size: 26px;
-    }
-
-    .section__excerpt {
-        font-size: 30px;
-        line-height: 34px;
-    }
-
-    .section__desc {
+    
+    @include respond-to(medium-screen) {
         font-size: 20px;
         line-height: 26px;
     }
-}
-
-@media screen and (max-width:1024px) {
-    .section__main-title {
-        font-size: 22px;
-    }
-
-    .section__excerpt {
-        font-size: 24px;
-        line-height: 28px;
-        max-width: 350px;
-    }
-
-    .section__desc {
+    
+    @include respond-to(l-tablet) {
         line-height: 24px;
         font-size: 18px;
     }
-}
-
-@media screen and (max-width:736px) {
-    .section__excerpt {
-        font-size: 22px;
-        line-height: 24px;
-        max-width: 450px;
-        margin-bottom: 15px;
-    }
-
-    .section__desc {
+    
+    @include respond-to(larg-mobile) {
         font-size: 18px;
         line-height: 22px;
     }
-}
-
-@media screen and (max-width:480px) {
-    .section__excerpt {
-        font-size: 20px;
-        line-height: 22px;
-        max-width: 450px;
-        margin-bottom: 15px;
-    }
-
-    .section__desc {
+    
+    @include respond-to(medium-mobile) {
         font-size: 16px;
         line-height: 20px;
         max-width: 440px;
@@ -187,17 +145,26 @@
     width: 39.21875%;
     height: auto;
     border-left: 1px solid #9b9b9b;
+    
+    @include respond-to(p-tablet) {width: 100%;}
 }
 
-@media screen and (max-width:768px) {
-    .section__col--services-list {
-        width: 100%;
-    }
-}
 
 .services-list__item {
     padding: 88px 0 88px 97px;
     border-bottom: solid 1px #9b9b9b;
+    
+    @include respond-to(xlarg-screen) {padding: 71px 0 71px 70px;}
+    @include respond-to(larg-screen) {padding: 59px 0 59px 70px;}
+    @include respond-to(medium-screen) {padding: 58px 0 58px 54px}
+    @include respond-to(small-screen) {padding: 55px 0 56px 40px;}
+    @include respond-to(l-tablet) {padding: 43px 0 43px 25px;}
+    @include respond-to(p-tablet) {
+        padding: 28px 0 28px 35px;
+        border-bottom: 0;
+        border-top: 1px solid #9b9b9b;
+    }
+    @include respond-to(larg-mobile) {padding: 27px 0 27px 15px;}
 }
 
 .services-list__item:last-child {
@@ -211,30 +178,93 @@
     background-repeat: no-repeat;
     vertical-align: middle;
     background-position: center;
+    
+    @include respond-to(larg-screen) {margin-right: 20px;}
+    @include respond-to(larg-mobile) {margin-right: 10px;}
 }
 
 .icon--cutting {
     background-image: url(../images/cutting.svg);
     width: 88px;
     height: 87px;
+    
+    @include respond-to(small-screen) {
+        width: 74px;
+        height: 68px;
+    }
+    
+    @include respond-to(l-tablet) {
+        width: 70px;
+        height: 65px;
+    }
+    
+    @include respond-to(larg-mobile) {
+        width: 67px;
+        height: 62px;
+    }
 }
 
 .icon--edge {
     background-image: url(../images/edge.svg);
     width: 88px;
     height: 54px;
+    
+    @include respond-to(small-screen) {
+        width: 76px;
+        height: 43px;
+    }
+    
+    @include respond-to(l-tablet) {
+        width: 72px;
+        height: 40px;
+    }
+    
+    @include respond-to(larg-mobile) {
+        width: 69px;
+        height: 38px;
+    }
 }
 
 .icon--drilling {
     background-image: url(../images/drilling.svg);
     width: 86px;
     height: 76px;
+    
+    @include respond-to(small-screen) {
+        width: 77px;
+        height: 64px;
+    }
+    
+    @include respond-to(l-tablet) {
+        width: 71px;
+        height: 60px;
+    }
+    
+    @include respond-to(larg-mobile) {
+        width: 68px;
+        height: 57px;
+    }
 }
 
 .icon--specialized {
     background-image: url(../images/specialized.svg);
     width: 91px;
     height: 57px;
+    
+    @include respond-to(small-screen) {
+        width: 75px;
+        height: 46px;
+    }
+    
+    @include respond-to(l-tablet) {
+        width: 70px;
+        height: 42px;
+    }
+    
+    @include respond-to(larg-mobile) {
+         width: 67px;
+        height: 39px;
+    }
 }
 
 .services-list__text {
@@ -244,148 +274,32 @@
     display: inline-block;
     vertical-align: middle;
     line-height: 43px;
+    
+    @include respond-to(larg-screen) {
+        font-size: 28px;
+        line-height: 35px;
+    }
+    
+    @include respond-to(medium-screen) {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    
+    @include respond-to(l-tablet) {
+        font-size: 18px;
+        line-height: 22px;
+    }
 }
+
 
 .services-list__text_small {
     font-size: 20px;
     line-height: 46px;
-}
-
-
-@media screen and (max-width:1680px) {
-    .services-list__item {
-        padding: 71px 0 71px 70px;
-    }
-}
-
-@media screen and (max-width:1440px) {
-
-    .services-list__item {
-        padding: 59px 0 59px 70px;
-    }
-
-    .services-list__icon {
-        margin-right: 20px;
-    }
-
-    .services-list__text  {
-        font-size: 28px;
-        line-height: 35px;
-    }
-}
-
-@media screen and (max-width:1366px) {
-    .services-list__item {
-        padding: 58px 0 58px 54px
-    }
-
-     .services-list__text  {
-        font-size: 24px;
-         line-height: 28px;
-    }
-
-     .services-list__text_small {
-        line-height: 38px;
-    }
-}
-
-@media screen and (max-width:1280px) {
-    .services-list__item {
-        padding: 55px 0 56px 40px;
-    }
-
-    .icon--cutting {
-        width: 74px;
-        height: 68px;
-    }
-
-    .icon--edge {
-        width: 76px;
-        height: 43px;
-    }
-
-    .icon--drilling {
-        width: 77px;
-        height: 64px;
-    }
-
-    .icon--specialized {
-        width: 75px;
-        height: 46px;
-    }
-}
-
-@media screen and (max-width:1024px) {
-    .services-list__item {
-        padding: 43px 0 43px 25px;;
-    }
-
-    .services-list__text {
-        font-size: 18px;
-        line-height: 22px;
-    }
-
-    .services-list__text_small {
+    
+    @include respond-to(medium-screen) {line-height: 38px;}
+    @include respond-to(l-tablet) {
         font-size: 14px;
         line-height: 25px;
-    }
-
-    .icon--cutting {
-        width: 70px;
-        height: 65px;
-    }
-
-    .icon--edge {
-        width: 72px;
-        height: 40px;
-    }
-
-    .icon--drilling {
-        width: 71px;
-        height: 60px;
-    }
-
-    .icon--specialized {
-        width: 70px;
-        height: 42px;
-    }
-}
-
-@media screen and (max-width:768px) {
-    .services-list__item {
-        padding: 28px 0 28px 35px;
-        border-bottom: 0;
-        border-top: 1px solid #9b9b9b;
-    }
-}
-
-@media screen and (max-width:736px) {
-    .services-list__item {
-        padding: 27px 0 27px 15px;
-    }
-
-    .services-list__icon {
-        margin-right: 10px;
-    }
-
-    .icon--cutting {
-        width: 67px;
-        height: 62px;
-    }
-
-    .icon--edge {
-        width: 69px;
-        height: 38px;
-    }
-
-    .icon--drilling {
-        width: 68px;
-        height: 57px;
-    }
-
-    .icon--specialized {
-        width: 67px;
-        height: 39px;
     }
 }
 
@@ -399,12 +313,8 @@
     padding-top: 55.85107421875%;
     position: relative;
     @extend .multiply-blend-bg;
-}
-
-@media screen and (max-width:768px) {
-    .section__col--service-details {
-        display: none;
-    }
+    
+    @include respond-to(p-tablet) {display: none;}
 }
 
 .section__col--service-details__info-wrapper {
