@@ -10,26 +10,10 @@
     padding-top:47.4%;
     background-blend-mode: multiply;
     background-color: #575757;
-}
-
-
-
-@media screen and (max-width:736px) {
-    .main-header {
-        padding-top: 60%;
-    }
-}
-
-@media screen and (max-width:480px) {
-    .main-header {
-        padding-top: 85%;
-    }
-}
-
-@media screen and (max-width:414px) {
-    .main-header {
-        padding-top: 100%;
-    }
+    
+    @include respond-to(large-mobile) { padding-top: 65%;}
+    @include respond-to(medium-mobile) { padding-top: 85%;}
+    @include respond-to(small-mobile) { padding-top: 100%;}
 }
 
 .logo {
@@ -119,7 +103,6 @@
 }
 
 
-
 .intro-component {
     position: absolute;
     left: 0;
@@ -127,13 +110,57 @@
     bottom: 0;
     width: 44.0625%;
     border-right: 1px solid #9b9b9b;
+    
+    @include respond-to(larg-screen) {padding-left: 80px;}
+    @include respond-to(l-tablet) {padding-left: 40px;}
+    @include respond-to(p-tablet) {border: 0;}
+    @include respond-to(larg-mobile) {padding-left: 20px;}
+    @include respond-to(medium-mobile) {width:50%;}
 }
+
+
+
 
 .intro-video__btn {
     width: 57px;
     height: 57px;
     margin-bottom: 24px;
     display: block;
+    
+    @include respond-to(larg-screen) {
+        width: 48px;
+        height: 48px;
+        margin-bottom: 10px;
+    }
+    
+     @include respond-to(small-screen) {
+        width: 45px;
+        height: 45px;
+    }
+    
+    @include respond-to(l-tablet) {
+        width: 45px;
+        height: 45px;
+        margin-bottom: 10px;
+    }
+    
+    @indclude respond-to(p-tablet) {
+        width: 36px;
+        height: 36px;
+        margin-bottom: 10px;
+    }
+    
+    @include respond-to(larg-mobile) {
+        width: 30px;
+        height: 30px;
+        margin-bottom: 10px;
+    }
+    
+    @include respond-to(medium-mobile) {
+        width: 25px;
+        height: 25px;
+        margin-bottom: 10px;
+    }
 }
 
 .intro-video__btn img {
@@ -147,105 +174,38 @@
     line-height: 64px;
     color: #ffffff;
     padding-bottom: 50px;
-}
-
-@media screen and (max-width:1440px) {
-    .intro-component {
-        padding-left: 80px;
-    }
-
-    .intro-video__btn {
-        width: 48px;
-        height: 48px;
-        margin-bottom: 10px;
-    }
-
-    .intro-text {
+    
+    @include respond-to(larg-screen) {
         font-size: 45px;
         line-height: 48px;
         padding-bottom: 40px;
     }
-}
-
-@media screen and (max-width:1280px) {
-    .intro-video__btn {
-        width: 45px;
-        height: 45px;
-    }
-
-    .intro-text {
+    
+    @include respond-to(small-screen) {
         font-size: 40px;
         line-height: 42px;
         padding-bottom: 20px;
     }
-}
-
-@media screen and (max-width:1024px) {
-    .intro-component {
-        padding-left: 40px;
-    }
-
-    .intro-video__btn {
-        width: 45px;
-        height: 45px;
-        margin-bottom: 10px;
-    }
-
-    .intro-text {
+    
+    @include respond-to(l-tablet) {
         font-size: 32px;
         line-height: 36px;
         padding-bottom: 20px;
     }
-}
-
-@media screen and (max-width:768px) {
-    .intro-component {
-        border: 0;
-    }
-
-    .intro-video__btn {
-        width: 36px;
-        height: 36px;
-        margin-bottom: 10px;
-    }
-
-    .intro-text {
+    
+    @include respond-to(p-tablet) {
         font-size: 26px;
         line-height: 28px;
         padding-bottom: 15px;
     }
-}
-
-@media screen and (max-width:736px) {
-    .intro-component {
-        padding-left: 20px;
-    }
-
-    .intro-video__btn {
-        width: 30px;
-        height: 30px;
-        margin-bottom: 10px;
-    }
-
-    .intro-text {
+    
+    @indlude respond-to(larg-mobile) {
         font-size: 22px;
         line-height: 24px;
         padding-bottom: 30px;
     }
-}
-
-@media screen and (max-width:480px) {
-    .intro-component {
-        width: 50%;
-    }
-
-    .intro-video__btn {
-        width: 25px;
-        height: 25px;
-        margin-bottom: 10px;
-    }
-
-    .intro-text {
+    
+    @include respond-to(medium-mobile) {
         font-size: 18px;
         line-height: 20px;
         padding-bottom: 10px;
