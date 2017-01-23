@@ -99,12 +99,10 @@
     @include respond-to(medium-mobile) {
         font-size: 20px;
         line-height: 22px;
-        max-width: 450px;
+        max-width: 350px;
         margin-bottom: 15px;
     }
 }
-
-
 
 .section__desc {
     font-family: $Light;
@@ -139,8 +137,6 @@
     }
 }
 
-
-
 .section__col--services-list {
     width: 39.21875%;
     height: auto;
@@ -148,7 +144,6 @@
     
     @include respond-to(p-tablet) {width: 100%;}
 }
-
 
 .services-list__item {
     padding: 88px 0 88px 97px;
@@ -164,6 +159,7 @@
         border-bottom: 0;
         border-top: 1px solid #9b9b9b;
     }
+    
     @include respond-to(larg-mobile) {padding: 27px 0 27px 15px;}
 }
 
@@ -290,7 +286,6 @@
         line-height: 22px;
     }
 }
-
 
 .services-list__text_small {
     font-size: 20px;
