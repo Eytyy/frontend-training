@@ -65,7 +65,6 @@
     }
 }
 
-//////ative state/////
 
 .section__col--process-details_is-active {
     width: 60.78%;
@@ -82,12 +81,8 @@
     z-index: 5;
     
     @extend .multiply-blend-bg
-}
-
-@media screen and (max-width:736px) {
-    .section__col--process-details_is-active {
-        width: 100%;
-    }
+        
+    @include respond-to(larg-mobile) { width: 100%;}
 }
 
 .section__col--process-details__info_is-active {
@@ -120,6 +115,9 @@
     width: 100%;
     position: relative;
     height: 100%;
+    
+    @include respond-to(l-tablet) {height: auto;}
+    @include respond-to(p-tablet) {height: auto;}
 }
 
 .process-details__steps__item {
@@ -128,59 +126,28 @@
     border-right: 1px solid #FFFFFF;
     height: 100%;
     padding: 118px 30px 0 44px;
-}
-
-@media screen and (max-width:1440px) {
-    .process-details__steps__item {
-        padding: 80px 20px 20px 25px;
-    }
-}
-
-
-@media screen and (max-width:1280px) {
-    .process-details__steps__item {
-        padding: 50px 18px 15px 20px;
-    }
-}
-
-@media screen and (max-width:1024px) {
-    .process-details__steps {
-        height: auto;
-    }
     
-    .process-details__steps__item {
+    @include respond-to(larg-screen) {padding: 80px 20px 20px 25px;}
+    @include respond-to(small-screen) {padding: 50px 18px 15px 20px;}
+    @include respond-to(l-tablet) {
         width: 100%;
         padding: 20px 100px 20px 45px;
         height: auto;
         border-bottom: 1px solid #ffffff;
         border-right: 0;
     }
-}
-
-@media screen and (max-width:768px) {
-    .process-details__steps {
-        height: auto;
-    }
     
-    .process-details__steps__item {
+    @include respond-to(p-tablet) {
         width: 100%;
         padding: 20px 30px 20px 20px;
         height: auto;
         border-bottom: 1px solid #ffffff;
     }
+    
+    @include respond-to(medium-mobile) {padding: 15px 20px 15px 20px;}
+    @indlude respond-to(xsmall-mobile) {padding: 10px 20px 10px 20px;}
 }
 
-@media screen and (max-width:480px) {
-    .process-details__steps__item {
-        padding: 15px 20px 15px 20px;
-    }
-}
-
-@media screen and (max-width:320px) {
-    .process-details__steps__item {
-        padding: 10px 20px 10px 20px;
-    }
-}
 
 .process-details__steps__item:last-child {
     border: none;
@@ -194,12 +161,65 @@
     line-height: 58px;
     margin-bottom: 39px;
     display: block;
+    
+    @include respond-to(larg-screen) {
+        margin-bottom: 28px;
+        font-size: 45px;
+        line-height: 50px;
+    }
+    
+    @include respond-to(small-screen) {
+        margin-bottom: 28px;
+        font-size: 40px;
+        line-height: 45px;
+    }
+    
+    @include respond-to(l-tablet) {
+        font-size: 30px;
+        line-height: 32px;
+        margin-bottom: 0px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    
+    @include respond-to(p-tablet) {
+        font-size: 26px;
+        line-height: 28px;
+        margin-bottom: 0px;
+        display: inline-block;
+        vertical-align: middle;
+    }
 }
 
 .process-details__steps__item__icon {
     width: 70px;
     height: 70px;
+    
+    @include respond-to(larg-screen) {
+        width: 50px;
+        height: 50px;
+    }
+    
+    @include respond-to(small-screen) {
+        width: 45px;
+        height: 45px;
+    }
+    
+    @include respond-to(l-tablet) {
+        width: 40px;
+        height: 40px;
+        vertical-align: middle;
+        margin: 0 8px;
+    }
+    
+    @include respond-to(p-tablet) {
+        width: 35px;
+        height: 35px;
+        vertical-align: middle;
+        margin: 0 8px;
+    }
 }
+
 
 .process-details__steps__item__title {
     font-family: $Bold;
@@ -208,79 +228,19 @@
     letter-spacing: 0;
     line-height: 34px;
     margin: 20px 0;
-}
-
-.process-details__steps__item__desc {
-    font-family: Roboto-Light;
-    font-size: 20.86px;
-    color: #FFFFFF;
-    line-height: 22px;
-}
-
-@media screen and (max-width:1440px) {
-    .number {
-        margin-bottom: 28px;
-        font-size: 45px;
-        line-height: 50px;
-    }
     
-    .process-details__steps__item__icon {
-        width: 50px;
-        height: 50px;
-    }
-    
-    .process-details__steps__item__title {
+    @include respond-to(larg-screen) {
         font-size: 28px;
         line-height: 32px;
     }
     
-    .process-details__steps__item__desc {
-        font-size: 18px;
-        line-height: 20px;
-    }
-}
-
-@media screen and (max-width:1280px) {
-    .number {
-        margin-bottom: 28px;
-        font-size: 40px;
-        line-height: 45px;
-    }
-    
-    .process-details__steps__item__icon {
-        width: 45px;
-        height: 45px;
-    }
-    
-    .process-details__steps__item__title {
+    @include respond-to(small-screen) {
         font-size: 24px;
         line-height: 28px;
         margin: 15px 0;
     }
     
-    .process-details__steps__item__desc {
-        font-size: 18px;
-        line-height: 20px;
-    }
-}
-
-@media screen and (max-width:1024px) {
-    .number {
-        font-size: 30px;
-        line-height: 32px;
-        margin-bottom: 0px;
-        display: inline-block;
-        vertical-align: middle;
-    }
-    
-    .process-details__steps__item__icon {
-        width: 40px;
-        height: 40px;
-        vertical-align: middle;
-        margin: 0 8px;
-    }
-    
-    .process-details__steps__item__title {
+    @include respond-to(l-tablet) {
         font-size: 22px;  
         line-height: 22px;
         margin: 0;
@@ -288,70 +248,58 @@
         vertical-align: middle;
     }
     
-     .process-details__steps__item__desc {
-        font-size: 16px;
-        line-height: 18px;
-         margin-top: 10px;
-    }
-}
-
-@media screen and (max-width:768px) {
-    .number {
-        font-size: 26px;
-        line-height: 28px;
-        margin-bottom: 0px;
-        display: inline-block;
-        vertical-align: middle;
-    }
     
-    .process-details__steps__item__icon {
-        width: 35px;
-        height: 35px;
-        vertical-align: middle;
-        margin: 0 8px;
-    }
-    
-    .process-details__steps__item__title {
+    @include respond-to(p-tablet) {
         font-size: 20px;  
         line-height: 20px;
         margin: 0;
         display: inline-block;
         vertical-align: middle;
     }
+}
+
+
+.process-details__steps__item__desc {
+    font-family: Roboto-Light;
+    font-size: 20.86px;
+    color: #FFFFFF;
+    line-height: 22px;
     
-     .process-details__steps__item__desc {
+    @include respond-to(larg-screen) {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    
+    @include respond-to(small-screen) {
+        font-size: 18px;
+        line-height: 20px;
+    }
+    
+    @include respond-to(l-tablet) {
+        font-size: 16px;
+        line-height: 18px;
+        margin-top: 10px;
+    }
+    
+    @include respond-to(p-tablet) {
         font-size: 14px;
         line-height: 16px;
-         margin-top: 5px;
+        margin-top: 5px
     }
 }
 
 
-/////end of actiev state/////
-
-
-
-
-
-/////Active/////
-
 .section__col--conatct-form_is-active {
     display: none;
 }
-
-/////active/////
-
-////active state/////
 
 .section__col--contact-details_is-active {
     width: 60.78%;
     height: auto;
     padding-top: 55.85107421875%;
     position: relative;
-}
-
-@media screen and (max-width:768px) {
-    .section__col--contact-details_is-active {
+    
+    @include respond-to(p-tablet) {
         width: 100%;
         margin-top: 15px;
     }
@@ -360,4 +308,3 @@
 .section__col--contact-details__info_is-active {
     display: none;
 }
-///active /////
