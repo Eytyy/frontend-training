@@ -80,7 +80,7 @@
     bottom: 0;
     z-index: 5;
     
-    @extend .multiply-blend-bg
+    @extend .multiply-blend-bg;
         
     @include respond-to(larg-mobile) { width: 100%;}
 }
