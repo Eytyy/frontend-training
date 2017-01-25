@@ -133,7 +133,7 @@
         width: 100%;
         padding: 20px 100px 20px 45px;
         height: auto;
-        border-bottom: 1px solid #ffffff;
+        border-bottom: 1px solid $white;
         border-right: 0;
     }
     
@@ -141,7 +141,7 @@
         width: 100%;
         padding: 20px 30px 20px 20px;
         height: auto;
-        border-bottom: 1px solid #ffffff;
+        border-bottom: 1px solid $white;
     }
     
     @include respond-to(medium-mobile) {padding: 15px 20px 15px 20px;}
@@ -154,7 +154,7 @@
 }
 
 .number {
-    font-family: $Black;
+    font-family: Roboto-Bold;
     font-size: 50px;
     color: #FFFFFF;
     letter-spacing: 0;
@@ -222,7 +222,7 @@
 
 
 .process-details__steps__item__title {
-    font-family: $Bold;
+    font-family: $title;
     font-size: 32.24px;
     color: #FFFFFF;
     letter-spacing: 0;
@@ -260,7 +260,7 @@
 
 
 .process-details__steps__item__desc {
-    font-family: Roboto-Light;
+    font-family: $body;
     font-size: 20.86px;
     color: #FFFFFF;
     line-height: 22px;

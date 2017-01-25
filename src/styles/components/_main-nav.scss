@@ -10,7 +10,7 @@
     z-index: 3;
     width: 16.71875%;
     display: block;
-    background-color: #fff;
+    background-color: $white;
     
     @include respond-to(p-tablet) {width: 100%;}
     
@@ -32,7 +32,7 @@
     list-style-type: none;
     padding: 0;
     margin: 152px 0 0 54px;
-    font-family: Roboto-Bold;
+    font-family: $title;
     text-transform: uppercase;
     
     @include respond-to(xlarg-screen) {margin:152px 0 0 40px;}
@@ -46,7 +46,7 @@
 
 .website-nav__main-menu__item {
     font-size: 30px;
-    color: #4a4a4a;
+    color: $black;
     margin-bottom: 12px;
     line-height: 35px;
     cursor: pointer;
@@ -90,9 +90,9 @@
 }
 
 .website-nav__contacts {
-    font-family: Roboto-Bold;
+    font-family: $title;
     font-size: 16px;
-    color: #4a4a4a;
+    color: $black;
     margin-left: 54px;
     line-height: 19px;
     
@@ -113,7 +113,7 @@
 
 
 .website-nav__contacts__item_small {
-    font-family: Roboto-Regular;
+    font-family: $small-body;
     margin-top: 1px;
 }
 

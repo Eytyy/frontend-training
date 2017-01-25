@@ -29,7 +29,7 @@
 }
 
 .section__main-title {
-    font-family: $Bold;
+    font-family: $title;
     font-size: 34px;
     line-height: 1.18;
     text-transform: uppercase;
@@ -55,16 +55,16 @@
 }
 
 .white-text {
-    color: #ffffff;
+    color: $white;
 }
 
 .black-text  {
-    color: #4a4a4a;
+    color: $black;
 }
 
 
 .section__excerpt {
-    font-family: $Light;
+    font-family: $body;
     font-size: 40px;
     font-weight: 300;
     line-height: 44px;
@@ -105,7 +105,7 @@
 }
 
 .section__desc {
-    font-family: $Light;
+    font-family: $body;
     font-size: 24px;
     line-height: 34px;
     max-width: 521px;
@@ -264,9 +264,9 @@
 }
 
 .services-list__text {
-    font-family: $Bold;
+    font-family: $title;
     font-size: 35px;
-    color: #414244;
+    color: $black;
     display: inline-block;
     vertical-align: middle;
     line-height: 43px;

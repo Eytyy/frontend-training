@@ -26,9 +26,9 @@
 }
 
 .section__info__item {
-    font-family: $Bold;
+    font-family: $title;
     font-size: 22px;
-    color: #4A4A4A;
+    color: $black;
     letter-spacing: 0;
     margin-bottom: 40px;
     line-height: 25px;
@@ -47,7 +47,7 @@
 }
 
 .section__info__item_small {
-    font-family: $Regular;
+    font-family: $small-body;
     line-height: 30px;
     
     @include respond-to(l-tablet) {line-height: 20px;}
@@ -58,7 +58,7 @@
     width: 100%;
     border-top: 1px solid #9B9B9B;
     padding-top: 44px;
-    font-family: $Regular;
+    font-family: $small-body;
     font-size: 22px;
     color: #9B9B9B;
     line-height: 25px;
@@ -104,7 +104,7 @@
 }
  
 .section__form__title {
-    font-family: $Bold;
+    font-family: $title;
     font-size: 34px;
     color: #535456;
     
@@ -124,7 +124,7 @@
 
 .section__form__input {
     width: 100%;
-    font-family: $Regular;
+    font-family: $small-body;
     font-size: 22px;
     color: #9B9B9B;
     border: 1px solid #9B9B9B;
@@ -166,10 +166,10 @@
 }
 
 .section__form__input__btn {
-    background: #4A4A4A;
+    background: $black;
     border: 0;
     padding: 31px 0 30px 0;
-    color: #FFFFFF;
+    color: $white;
     
     @include respond-to(larg-screen) {padding: 28px 0 25px 0;}
     @include respond-to(medium-screen) {padding: 25px 0 23px 0;}

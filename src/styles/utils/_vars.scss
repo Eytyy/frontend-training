@@ -1,9 +1,10 @@
 /* utils/_variables.scss */
 
 // Fonts Variables
-$title: '', sans-serif;
-$body: '', sans-serif;
-
+$title: 'Roboto-Bold', sans-serif;
+$body: 'Roboto-light', sans-serif;
+$small-body: 'Roboto-Regular', sans-serif;
 // Colors Variables
 $link__color: rgba(88, 75, 97, 1);
-$black: rgba(0, 0, 0, 1);
+$black: #4A4A4A;
+$white: #fff;
