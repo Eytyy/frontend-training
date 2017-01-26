@@ -1,3 +1,36 @@
+
+.intro-component_active {
+    position: absolute;
+    left: 0;
+    padding-left: 148px;
+    bottom: 0;
+    width: 39.21875%;
+    border-right: 1px solid #9b9b9b;
+    z-index: 2;
+    
+    @include respond-to(larg-screen) {padding-left: 80px;}
+    @include respond-to(l-tablet) {padding-left: 40px;}
+    @include respond-to(p-tablet) {border: 0;}
+    @include respond-to(larg-mobile) {padding-left: 20px;}
+    @include respond-to(medium-mobile) {width:50%;}
+}
+
+.close-icon {
+    position: absolute;
+    right: 55px;
+    top: 40px;
+    z-index: 5;
+    
+    @include respond-to(l-tablet) {
+        top: 25px;
+    }
+    
+     @include respond-to(larg-mobile) {
+        top: 20px;
+    }
+}
+
+
 .section__col--services-info_is-active {
     display: none;
 }

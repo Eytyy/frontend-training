@@ -23,9 +23,9 @@
         padding-top: 75%;
     }
     
-    @include respond-to(medium-mobile) {padding-top: 120%;}
+    @include respond-to(medium-mobile) {padding-top: 100%;}
+    @include respond-to(small-mobile) {padding-top: 135%;}
 }
-
 
 .section__col--process-info-wrapper {
     position: absolute;
