@@ -1,70 +1,80 @@
+//@mixin respond-to($media) {
+//    @if $media == xsmall-mobile {
+//        @media screen and (max-width:320px) {@content;}
+//    }
+//    
+//    @else if $media == small-mobile {
+//        @media screen and (max-width:414px) {@content;}
+//    }
+//    
+//    @else if $media == medium-mobile {
+//        @media screen and (max-width:480px) {@content;}
+//    }
+//    
+//    @else if $media == larg-mobile {
+//        @media screen and (max-width:736px) {@content;}
+//    }
+//    
+//     @else if $media == p-tablet {
+//        @media screen and (max-width:768px) {@content;}
+//    }
+//    
+//     @else if $media == l-tablet {
+//        @media screen and (max-width:1024px) {@content;}
+//    }
+//    
+//     @else if $media == small-screen {
+//        @media screen and (max-width:1280px) {@content;}
+//    }
+//    
+//     @else if $media == medium-screen {
+//        @media screen and (max-width:1366px) {@content;}
+//    }
+//    
+//     @else if $media == larg-screen {
+//        @media screen and (max-width:1440px) {@content;}
+//    }
+//    
+//     @else if $media == xlarg-screen {
+//        @media screen and (max-width:1680px) {@content;}
+//    }
+//}
+
+
 @mixin respond-to($media) {
-    @if $media == xsmall-mobile {
-        @media screen and (max-width:320px) {@content;}
+    @if $media == xportrait-mobile {
+        @media screen and (min-width:414px) {@content;}
+    } 
+    
+    @else if $media == landscape-mobile {
+        @media screen and (min-width:481px) {@content;}//736
     }
     
-    @else if $media == small-mobile {
-        @media screen and (max-width:414px) {@content;}
+    @else if $media == portrait-tablet {
+        @media screen and (min-width:734px) {@content;}//768
     }
     
-    @else if $media == medium-mobile {
-        @media screen and (max-width:480px) {@content;}
+    @else if $media == landscape-tablet {
+        @media screen and (min-width:769px) {@content;}//1024
     }
     
-    @else if $media == larg-mobile {
-        @media screen and (max-width:736px) {@content;}
-    }
-    
-     @else if $media == p-tablet {
-        @media screen and (max-width:768px) {@content;}
-    }
-    
-     @else if $media == l-tablet {
-        @media screen and (max-width:1024px) {@content;}
+    @else if $media == xsmall-screen {
+        @media screen and (min-width:1025px) {@content;}//1280
     }
     
      @else if $media == small-screen {
-        @media screen and (max-width:1280px) {@content;}
+        @media screen and (min-width:1281px) {@content;}//1366
     }
     
-     @else if $media == medium-screen {
-        @media screen and (max-width:1366px) {@content;}
+    @else if $media == medium-screen {
+        @media screen and (min-width:1367px) {@content;}//1440
     }
     
-     @else if $media == larg-screen {
-        @media screen and (max-width:1440px) {@content;}
+    @else if $media == large-screen {
+        @media screen and (min-width:1441px) {@content;}//1680
     }
     
-     @else if $media == xlarg-screen {
-        @media screen and (max-width:1680px) {@content;}
+    @else if $media == xlarge-screen {
+        @media screen and (min-width:1681px) {@content;}//1920
     }
 }
-
-
-///Mobile first break points
-
-//@mixin respond-to($media) {
-//    @if $media == landscape-mobile {
-//        @media screen and (min-width:481px) {@content;}
-//    }
-//    
-//    @else if $media == portrait-tablet {
-//        @media screen and (min-width:640px) {@content;}
-//    }
-//    
-//    @else if $media == landscape-tablet {
-//        @media screen and (min-width:769px) {@content;}
-//    }
-//    
-//    @else if $media == small-screen {
-//        @media screen and (min-width:1025px) {@content;}
-//    }
-//    
-//    @else if $media == large-screen {
-//        @media screen and (min-width:1441px) {@content;}
-//    }
-//    
-//    @else if $media == xlarge-screen {
-//        @media screen and (min-width:1681px) {@content;}
-//    }
-//}

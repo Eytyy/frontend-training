@@ -4,14 +4,12 @@
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    padding-top:47.4%;
     background-blend-mode: multiply;
     background-color: #575757;
-    
-    @include respond-to(larg-mobile) {padding-top: 60%;}
-    @include respond-to(medium-mobile) {padding-top: 85%;}
-    @include respond-to(small-mobile) {padding-top: 100%;}
-    
+    padding-top: 100%;
+    @include respond-to(xportrait-mobile) {padding-top: 85%;}
+    @include respond-to(landscape-mobile) {padding-top: 60%;}
+    @include respond-to(portrait-tablet) {padding-top:47.4%;}
 }
 
 .video-container {
@@ -22,9 +20,10 @@
     overflow: hidden;
     top: 0;
     left: 0;
+     visibility: hidden;
     
-    @include respond-to (p-tablet) {
-        display: none;
+    @include respond-to (landscape-tablet) {
+        visibility: visible;
     }
 }
 
@@ -33,128 +32,124 @@ video {
     min-height: 100%;
 }
 
+
 .logo {
     position: absolute;
-    left: 148px;
-    top: 64px;
     z-index: 2;
+    left: 20px;
+    top: 30px;
+    width: 40%;
     
-    @include respond-to(larg-screen) {
+    @include respond-to(portrait-tablet) {
+        top:40px;
+        width: 30%;
+    }
+    
+    @include respond-to(landscape-tablet) {left: 40px;}
+    @include respond-to(xsmall-screen) {
         width: 25%;
         left: 80px;
     }
     
-    @include respond-to(l-tablet) {
-         width: 30%;
-         left: 40px;
-    }
-    
-    @include respond-to(p-tablet) {
-        top: 40px;
-    }
-    
-    @include respond-to(larg-mobile) {
-        top: 30px;
-        left: 20px;
-    }
-    
-    @include respond-to(medium-mobile) {
-        width: 40%;
+    @include respond-to(large-screen) {
+        left: 148px;
+        top: 64px;
     }
 }
-
 
 .logo img {
         width: 100%;
 }
 
 .menu-toggle {
-    position: absolute;
-    right: 76px;
-    top: 61px;
-    z-index: 2;
-    width: 42px;
-    height: 32px;
     
-    @include respond-to(p-tablet) {
+    position: absolute;
+    z-index: 2;
+    width: 32px;
+    height: 21px;
+    top: 30px;
+    right: 40px;
+    
+    @include respond-to(portrait-tablet) {
         width: 38px;
         height: 28px;
         top: 48px;
     }
     
-    @include respond-to(larg-mobile) {
-        top: 30px;
-        right: 40px;
-    }
-    
-    @include respond-to(medium-mobile) {
-        width: 32px;
-        height: 21px;
+    @include respond-to(landscape-tablet) {
+    right: 76px;
+    top: 61px;
+    width: 42px;
+    height: 32px;
     }
 }
-
 
 .menu-toggle img {
     width: 100%;
 }
 
-
 .intro-component {
     position: absolute;
     left: 0;
-    padding-left: 148px;
-    bottom: 0;
-    width: 44.0625%;
-    border-right: 1px solid #9b9b9b;
     z-index: 2;
+    width:50%;
+    bottom: 0;
+    padding-left: 20px;
     
-    @include respond-to(larg-screen) {padding-left: 80px;}
-    @include respond-to(l-tablet) {padding-left: 40px;}
-    @include respond-to(p-tablet) {border: 0;}
-    @include respond-to(larg-mobile) {padding-left: 20px;}
-    @include respond-to(medium-mobile) {width:50%;}
+    @include respond-to(portrait-tablet) {
+         width: 44.0625%;
+    }
+    
+    @include respond-to(landscape-tablet) {
+        padding-left: 40px;
+        padding-right: 40px;
+        border-right: 1px solid #9b9b9b;
+    }
+    
+    @include respond-to(xsmall-screen) {
+        padding-left: 80px;
+    }
+    
+    @include respond-to(large-screen) {
+        padding-left: 148px;
+    }
 }
 
-
 .intro-video__btn {
-    width: 57px;
-    height: 57px;
-    margin-bottom: 24px;
     display: block;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 10px;
     
-    @include respond-to(larg-screen) {
-        width: 48px;
-        height: 48px;
-        margin-bottom: 10px;
-    }
-    
-     @include respond-to(small-screen) {
-        width: 45px;
-        height: 45px;
-    }
-    
-    @include respond-to(l-tablet) {
-        width: 45px;
-        height: 45px;
-        margin-bottom: 10px;
-    }
-    
-    @indclude respond-to(p-tablet) {
-        width: 36px;
-        height: 36px;
-        margin-bottom: 10px;
-    }
-    
-    @include respond-to(larg-mobile) {
+    @include respond-to(landscape-mobile) {
         width: 30px;
         height: 30px;
-        margin-bottom: 10px;
     }
     
-    @include respond-to(medium-mobile) {
-        width: 25px;
-        height: 25px;
-        margin-bottom: 10px;
+    @indclude respond-to(portrait-tablet) {
+        width: 36px;
+        height: 36px;
+    }
+    
+    @include respond-to(landscape-tablet) {
+        width: 45px;
+        height: 45px;
+    }
+    
+      @include respond-to(xsmall-screen) {
+        width: 45px;
+        height: 45px;
+    }
+    
+    @include respond-to(small-screen) {
+         width: 48px;
+        height: 48px;
+    }
+    
+    @include respond-to(large-screen) {
+        width: 57px;
+    height: 57px;
+    margin-bottom: 24px;
     }
 }
 
@@ -166,44 +161,43 @@ video {
 .intro-text {
     text-transform: uppercase;
     font-family: $title;
-    font-size: 60px;
-    line-height: 64px;
     color: $white;
-    padding-bottom: 50px;
+    font-size: 18px;
+    line-height: 20px;
+    padding-bottom: 10px;
     
-    @include respond-to(larg-screen) {
-        font-size: 45px;
-        line-height: 48px;
-        padding-bottom: 40px;
-    }
-    
-    @include respond-to(small-screen) {
-        font-size: 40px;
-        line-height: 42px;
-        padding-bottom: 20px;
-    }
-    
-    @include respond-to(l-tablet) {
-        font-size: 32px;
-        line-height: 36px;
-        padding-bottom: 20px;
-    }
-    
-    @include respond-to(p-tablet) {
-        font-size: 26px;
-        line-height: 28px;
-        padding-bottom: 15px;
-    }
-    
-    @indlude respond-to(larg-mobile) {
+    @include respond-to(landscape-mobile) {
         font-size: 22px;
         line-height: 24px;
         padding-bottom: 30px;
     }
     
-    @include respond-to(medium-mobile) {
-        font-size: 18px;
-        line-height: 20px;
-        padding-bottom: 10px;
+    @include respond-to(portrait-tablet) {
+        font-size: 26px;
+        line-height: 28px;
+        padding-bottom: 15px;
+    }
+    
+    @include respond-to(landscape-tablet) {
+        font-size: 32px;
+        line-height: 36px;
+        padding-bottom: 20px;
+    }
+    @include respond-to(xsmall-screen) {
+        font-size: 40px;
+        line-height: 42px;
+        padding-bottom: 20px;
+    }
+    
+    @include respond-to(small-screen) {
+        font-size: 45px;
+        line-height: 48px;
+        padding-bottom: 40px;
+    }
+    
+    @include respond-to(large-screen) {
+        font-size: 60px;
+        line-height: 64px;
+        padding-bottom: 50px;
     }
 }

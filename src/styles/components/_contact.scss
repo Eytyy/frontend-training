@@ -182,7 +182,8 @@
     height: auto;
     padding-top: 55.85107421875%;
     position: relative;
-    
+    @include respond-to(xlarg-screen) {padding-top: 63.851074%;}
+    @include respond-to(larg-screen) {padding-top:55.85107421875%; }
     @include respond-to(small-screen) {padding-top: 61.7%;}
     @include respond-to(p-tablet) {display: none;}
 }

@@ -5,26 +5,25 @@
 }
 
 .section__col--process-info {
-    width: 83.28125%;
     background-image: url(../images/processBg.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding-top: 55.85107421875%;
     position: relative;
     height: auto;
     clear: both;
     z-index: 0;
-    
+    width: 100%;
+    padding-top: 135%;
     @extend .multiply-blend-bg;
     
-    @include respond-to(p-tablet) {
-        width: 100%;
-        padding-top: 75%;
-    }
+    @include respond-to(xportrait-mobile) {padding-top: 100%;}
+    @include respond-to(landscape-mobile) {padding-top: 75%;}
     
-    @include respond-to(medium-mobile) {padding-top: 100%;}
-    @include respond-to(small-mobile) {padding-top: 135%;}
+    @include respond-to(landscape-tablet) {
+        width: 83.28125%;
+        padding-top: 55.85107421875%;
+    }
 }
 
 .section__col--process-info-wrapper {
@@ -35,158 +34,158 @@
 }
 
 .section__col--process-info-header {
-    margin-top: 179px;
-    padding-left: 148px;
+    padding-left: 20px;
+    margin-top: 45px;
     
-    @include respond-to(larg-screen) {
-        margin-top: 140px;
-        padding-left: 80px;
-    }
-    
-    @include respond-to(l-tablet) {
+    @include respond-to(portrait-tablet) {
         margin-top: 90px;
         padding-left: 40px;
     }
     
-    @include respond-to(larg-mobile) {
-        padding-left: 20px;
-        margin-top: 45px;
-    }
-}
-
-.section__col--process-steps {
-    margin-top: 201px;
-    width: 100%;
-    height: auto;
-    clear: both;
-    padding-left: 148px;
-    
-    @include respond-to(larg-screen) {
-        margin-top: 150px;
+    @include respond-to(xsmall-screen) {
+        margin-top: 140px;
         padding-left: 80px;
     }
     
-    @include respond-to(l-tablet) {
+    @include respond-to(large-screen) {
+        margin-top: 179px;
+        padding-left: 148px;
+    } 
+}
+
+.section__col--process-steps {
+    width: 100%;
+    height: auto;
+    clear: both;
+    padding-left: 20px;
+    margin-top: 120px;
+    
+    @include respond-to(portrait-tablet) {
         margin-top: 100px;
         padding-left: 40px;
     }
     
-    @include respond-to(larg-mobile) {
-        padding-left: 20px;
-        margin-top: 120px;
+     @include respond-to(xsmall-screen) {
+        margin-top: 150px;
+        padding-left: 80px;
+    }
+    
+    @include respond-to(large-screen) {
+        margin-top: 201px;
+        padding-left: 148px;
     }
 }
-
 
 .process-steps__item {
     width: 25%;
     float: left;
     height: auto;
     border-top: 1px solid #FFFFFF;
+    padding-right: 20px;
     
-    @include respond-to(medium-mobile) {padding-right: 20px;}
+    @include respond-to(landscape-mobile) {padding-right: 0;}
 }
 
 .process-steps__item:before {
     content: '';
     display: block;
-    margin-top: -90px;
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
-    height: 60px;
+    height: 50px;
+    margin-top: -60px;
     
-    @include respond-to(l-tablet) {margin-top: -70px;}
-    
-    @include respond-to(larg-mobile) {
+    @include respond-to(landscape-mobile) {
         height: 50px;
         margin-top: -60px
     }
     
-    @include respond-to(medium-mobile) {
-        height: 50px;
-        margin-top: -60px;
+    @include respond-to(portrait-tablet){margin-top: -70px;}
+    @include respond-to(xsmall-screen) {
+        margin-top: -90px;
+        height: 60px;
     }
 }
 
+
 .design:before {
     background-image: url(../images/design.svg);
-    width: 57px;
-    
-    @include respond-to(l-tablet) {width: 50px;}
-    @include respond-to(medium-mobile) {width: 42px;}
+    width: 42px;
+    @include respond-to(landscape-mobile){width: 50px;}
+    @include respond-to(xsmall-screen) { width: 57px}
 }
 
 .development:before {
-    background-image: url(../images/development.svg);
-    width: 58px;
     
-    @include respond-to(l-tablet) {width: 51px;}
-    @include respond-to(medium-mobile) {width: 44px;}
+    background-image: url(../images/development.svg);
+    width: 44px;
+    
+    @include respond-to(landscape-mobile){width:51px;}
+    @include respond-to(xsmall-screen) {width:58px;}
 }
 
 .quotation:before {
     background-image: url(../images/quotation.svg);
-    width: 56px;
+    width: 42px;
     
-    @include respond-to(l-tablet) {width: 49px;}
-    @include respond-to(medium-mobile) {width: 42px;}
+    @include respond-to(landscape-mobile){width: 49px;}
+    @include respond-to(xsmall-screen) { width: 56px;}
 }
 
 .production:before {
     background-image: url(../images/production.svg);
-    width: 47px;
+    width: 35px;
     
-    @include respond-to(l-tablet) {width: 40px;}
-    @include respond-to(medium-mobile) {width: 35px;}
+    @include respond-to(landscape-mobile){width: 40px;}
+    @include respond-to(xsmall-screen) {width: 47px;}
 }
 
 
 .process-steps__text {
-    font-family: $title;
-    font-size: 34px;
-    line-height: 40px;
     color: #FFFFFF;
-    
-    @include respond-to(larg-screen) {
-        font-size: 30px;
-        line-height: 34px;
-    } 
-    
-    @include respond-to(medium-screen) {
+    font-family: $title;
+    font-size: 16px;
+    line-height: 20px;
+    @include respond-to(xportrait-mobile) {font-size: 18px;}
+    @include respond-to(landscape-mobile) {
+        font-size: 22px;
+        line-height: 26px;
+    }
+    @include respond-to(xsmall-screen) {
         font-size: 26px;
         line-height: 30px;
     }
     
-    @include respond-to(l-tablet) {
-        font-size: 22px;
-        line-height: 26px;
+    @include respond-to(medium-screen) {
+        font-size: 30px;
+        line-height: 34px;
     }
     
-    @include respond-to(medium-mobile) {font-size: 18px;}
-    
-    @include respond-to(small-mobile) {
-        font-size: 16px;
-        line-height: 20px;
+    @include respond-to(large-screen) {
+        font-size: 34px;
+        line-height: 40px;
     }
 }
 
 .process-steps__text:before {
     content: '';
-    height: 52px;
-    width: 1px;
-    margin-top: 29px;
-    top: 0;
-    margin-bottom: 21;
-    display: block;
     background-color: $white;
-    
-    @include respond-to(l-tablet) {margin-top: 10px;}
-    
-    @include respond-to(small-mobile) {
-        height: 30px;
-        margin-bottom: 15px;
+    display: block;
+    width: 1px;
+    height: 30px;
+    margin-bottom: 15px;
+    margin-top: 10px;
+
+    @include respond-to(portrait-tablet) {
+        margin-top: 20px;
     }
+    
+    @include respond-to(xsmall-screen) {
+        height: 52px;
+        margin-top: 29px;
+        top: 0;
+        margin-bottom: 21;
+    } 
 }
 
 .section__col--process-details {
@@ -198,77 +197,77 @@
     background-size: cover;
     position: relative;
     padding-top: 55.85107421875%;
-    
+    display: none;
     @extend .multiply-blend-bg;
     
-    @include respond-to(p-tablet) {display: none;}
+    @include respond-to(landscape-tablet) {display: block;}
 }
 
 
 .section__col--process-details__info {
     position: absolute;
-    top: 205px;
-    left: 36px;
-    padding-right: 70px;
     color: #FFFFFF;
     z-index: 2;
-    
-    @include respond-to(xlarg-screen) {padding-right: 50px;}
-    
-    @include respond-to(larg-screen) {
-        padding-right: 40px;
+    padding-right: 15px;
+    left: 20px;
+    top: 105px;
+        
+    @include respond-to(xsmall-screen) {
+        padding-right: 35px;
+        top: 165px;
         left: 26px;
-        top: 168px;
     }
     
     @include respond-to(medium-screen) {
-        padding-right: 35px;
-        top: 165px;
+        padding-right: 40px;
+        top: 168px;
     }
     
-    @include respond-to(l-tablet) {
-        padding-right: 15px;
-        left: 20px;
-        top: 105px
+    @include respond-to(large-screen) {margin-right: 50px;}
+    @include respond-to(xlarge-screen) {
+        top: 205px;
+        left: 36px;
+        padding-right: 70px;
     }
 }
 
+
 .section__side-title {
     font-family: $title;
-    font-size: 34px;
-    line-height: 36px;
     text-transform: uppercase;
-    margin-bottom: 23px;
+    font-size: 22px;
+    line-height: 26px;
+
+    @include respond-to(xsmall-screen) {
+        font-size: 26px;
+        line-height: 32px;
+        margin-bottom: 23px;
+    }
     
-    @include respond-to(larg-screen) {
+    @include respond-to(medium-screen) {
         font-size: 30px;
         line-height: 32px;
     }
     
-    @include respond-to(medium-screen) {
-        font-size: 26px;
-        line-height: 32px;
+    @minclude respond-to(large-screen){
+        font-size: 34px;
+        line-height: 36px;
     }
     
-    @include respond-to(l-tablet) {
-        font-size: 22px;
-        line-height: 26px;
-    }
 }
-
 
 .section__side-text {
     font-family: $body;
-    font-size: 22px;
-    line-height: 24px;
+    font-size: 16px;
+    line-height: 18px;
     
-    @include respond-to(larg-screen) {
+    @include respond-to(xsmall-screen) {
         font-size: 18px;
         line-height: 20px
     }
     
-    @include respond-to(l-tablet) {
-        font-size: 16px;
-        line-height: 18px;
-    }
+    @include respond-to(large-screen) {
+        font-size: 22px;
+        line-height: 24px;
+    } 
 }
