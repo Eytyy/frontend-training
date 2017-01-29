@@ -8,109 +8,117 @@
     top: 0;
     bottom: 0;
     z-index: 3;
-    width: 16.71875%;
+    width: 100%;
     display: block;
     background-color: $white;
     
-    @include respond-to(p-tablet) {width: 100%;}
-    
+    @include respond-to(landscape-tablet) {width: 16.71875%;}
 }
 
 .website-nav__close-icon {
+    position: relative;
     width: 19px;
     height: 19px;
-    margin-left: 54px;
-    position: relative;
-    top: 57px;
+    top: 30px;
+    margin-left: 20px;
     
-    @include respond-to(xlarg-screen) {margin-left: 40px;}
-    @include respond-to(larg-screen) {margin-left: 20px;}
-    @include respond-to(p-tablet) {top: 30px;}
+    @include respond-to(large-screen) {
+        margin-left: 40px;
+        top: 57px;
+    }
+    
+    @include respond-to(xlarge-screen) {margin-left: 54px;}
 }
+
+
+
 
 .website-nav__main-menu {
-    list-style-type: none;
-    padding: 0;
-    margin: 152px 0 0 54px;
     font-family: $title;
     text-transform: uppercase;
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    margin: 30px 0 0 10px;
     
-    @include respond-to(xlarg-screen) {margin:152px 0 0 40px;}
-    @include respond-to(larg-screen) {margin:152px 0 0 20px;}
-    @include respond-to(l-tablet) {margin: 110px 0 0 20px;}
-    @include respond-to(p-tablet) {
-        text-align: center;
-        margin: 30px 0 0 10px;
+    @include respond-to(landscape-tablet) {
+        margin: 110px 0 0 20px;
+        text-align: left;
     }
+    @incldue respond-to(xsmall-screen) {margin:152px 0 0 20px;}
+    @include respond-to(large-screen){margin:152px 0 0 40px;}
+    @include respond-to(xlarge-screen){margin: 152px 0 0 54px;}
 }
 
+
+
+
 .website-nav__main-menu__item {
-    font-size: 30px;
     color: $black;
-    margin-bottom: 12px;
-    line-height: 35px;
     cursor: pointer;
+    line-height: 20px;
+    font-size: 18px;
+    margin-bottom: 5px;
     
-    @include respond-to(larg-screen) {
-        font-size: 26px;
-        line-height: 30px;
-    }
-    
-    @include respond-to(small-screen) {
+    @include respond-to(landscape-tablet) {line-height: 20px;}
+    @include respond-to(xsmall-screen){
         font-size: 24px;
         line-height: 26px;
         margin-bottom: 12px;
     }
     
-    @include respond-to(l-tablet) {
-        font-size: 18px;
-        margin-bottom: 5px;
-        line-height: 20px;
+    @include respond-to(medium-screen) {
+        font-size: 26px;
+        line-height: 30px;
     }
     
-    @include respond-to(p-tablet) {line-height: 20px;}
+    @include respond-to(large-screen) {
+        font-size: 30px;
+        line-height: 35px;
+    }
 }
-
 
 .website-nav__main-menu__item_selected {
     color: #e21318;
 }
 
 .website-nav__footer {
-    margin-top: 375px;
-    
-    @include respond-to(xlarg-screen) {margin-top: 250px;}
-    @include respond-to(larg-screen) {margin-top: 150px;}
-    @include respond-to(medium-screen) {margin-top: 100px;}
-    @include respond-to(l-tablet) {margin-top: 80px;}
-    @include respond-to(p-tablet) {
-        text-align: center;
-        margin-top: 35px;
+    text-align: center;
+    margin-top: 35px;
+    @include respond-to(landscape-tablet) {
+        text-align: left;
+        margin-top: 80px;
     }
+    @include respond-to(xsmall-screen) {margin-top: 100px;}
+    @include respond-to(medium-screen) {margin-top: 150px;}
+    @include respond-to(large-screen) {margin-top: 250px;}
+    @include respond-to(large-screen) {margin-top: 375px;}
 }
 
 .website-nav__contacts {
     font-family: $title;
-    font-size: 16px;
     color: $black;
-    margin-left: 54px;
-    line-height: 19px;
+    font-size: 14px;
+    line-height: 17px;
+    margin-left: 20px;
     
-    @include respond-to(xlarg-screen) {margin-left: 40px;}
-    @include respond-to(larg-screen) {margin-left: 20px;}
-    @include respond-to(l-tablet) {
-        font-size: 14px;
-        line-height: 17px;
+    @include respond-to(landscape-tablet) {margin-left: 20px;}
+    @include respond-to(xsmall-screen) {font-size: 16px; }
+    
+    @include respond-to(large-screen) {
+        margin-left: 40px;
+        line-height: 19px;
     }
+    
+    @include respond-to(xlarge-screen) {margin-left: 54px;}
+    
 }
 
 .website-nav__contacts__item {
-    margin-top: 36px;
-    
-    @include respond-to(larg-screen) {margin-top: 26px;}
-    @include respond-to(l-tablet) {margin-top: 20px;}
+    margin-top: 20px;
+    @include respond-to(xsmall-screen){margin-top: 26px;}
+    @include respond-to(large-screen) {margin-top: 36px;}
 }
-
 
 .website-nav__contacts__item_small {
     font-family: $small-body;
@@ -118,17 +126,18 @@
 }
 
 .website-nav__social {
-    width: 100%;
     position: absolute;
-    bottom: 0;
     z-index: 3;
-    left: 0;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15px;
     
-    @include respond-to(p-tablet) {
-        width: 50%;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 15px;
+    @include respond-to(landscape-tablet) {
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        transform: translateX(0);
     }
 }
 
@@ -142,15 +151,17 @@
     border: 0;
 }
 
+
+
 .website-nav__social__item_bg {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
     width: 100%;
     padding-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;;
     
-    @include respond-to(l-tablet) {margin-bottom: 10px;}
+    @include respond-to(xsmall-screen) {margin-bottom: 20px;}
 }
 
 
