@@ -144,10 +144,6 @@
     @include respond-to(landscape-tablet) {width: 39.21875%;}
 }
 
-
-
-
-
 .services-list__item {
     border-bottom: solid 1px #9b9b9b;
     padding: 27px 0 27px 15px;
@@ -163,7 +159,7 @@
     @include respond-to(small-screen) {padding: 58px 0 58px 54px;}
     @include respond-to(medium-screen) {padding: 59px 0 59px 70px;}
     @include respond-to(large-screen) {padding: 71px 0 71px 70px;}
-    @include respond-to(xlarge-screen) {padding: 88px 0 88px 97px;}
+    @include respond-to(xlarge-screen) {padding: 88px 0 87px 97px;}
  }
 
 .services-list__item:last-child {

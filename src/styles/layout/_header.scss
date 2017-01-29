@@ -9,7 +9,7 @@
     padding-top: 100%;
     @include respond-to(xportrait-mobile) {padding-top: 85%;}
     @include respond-to(landscape-mobile) {padding-top: 60%;}
-    @include respond-to(portrait-tablet) {padding-top:47.4%;}
+    @include respond-to(portrait-tablet) {padding-top:47.3%;}
 }
 
 .video-container {
@@ -43,9 +43,9 @@ video {
     @include respond-to(portrait-tablet) {
         top:40px;
         width: 30%;
+        left: 40px;
     }
-    
-    @include respond-to(landscape-tablet) {left: 40px;}
+
     @include respond-to(xsmall-screen) {
         width: 25%;
         left: 80px;
@@ -98,10 +98,11 @@ video {
     
     @include respond-to(portrait-tablet) {
          width: 44.0625%;
+        padding-left: 40px;
     }
     
     @include respond-to(landscape-tablet) {
-        padding-left: 40px;
+        
         padding-right: 40px;
         border-right: 1px solid #9b9b9b;
     }
@@ -165,6 +166,7 @@ video {
     font-size: 18px;
     line-height: 20px;
     padding-bottom: 10px;
+    padding-right: 40px;
     
     @include respond-to(landscape-mobile) {
         font-size: 22px;

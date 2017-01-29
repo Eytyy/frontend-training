@@ -15,13 +15,9 @@
         padding: 96px 0 0 80px;
     }
     
-    @include respond-to(large-screen) {padding: 96px 0 0 80px;}
+    @include respond-to(large-screen) {padding: 96px 0 0 148px;}
 }
 
-
-.section__col--contatc-info_is-active {
-    padding: 116px 0 0 148px;
-}
 
 .section__info {
     height: auto;
@@ -29,7 +25,6 @@
     @include respond-to(xsmall-screen){margin-top: 47px;}
     @include respond-to(large-screen){margin-top: 57px;}
 }
-
 
 .section__info__item {
     font-family: $title;
@@ -51,8 +46,6 @@
         margin-bottom: 40px;
     }
 }
-
-
 
 .section__info__item_small {
     font-family: $small-body;
@@ -180,14 +173,11 @@
     @include respond-to(large-screen) {padding: 31px 0 30px 0;}
 }
 
-
-
-
 .section__col--contact-details {
     position: relative;
     height: auto;
     display: none;
-    padding-top: 61.7%;
+    padding-top: 61.8%;
     width: 16.71875%;
     @include respond-to(landscape-tablet) {
         display: block;

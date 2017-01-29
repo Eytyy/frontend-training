@@ -300,6 +300,26 @@
     }
 }
 
+.section__col--contatc-info_is-active {
+    width: 100%;
+    height: auto;
+    padding: 40px 0 0 20px;
+    @include respond-to(portrait-tablet)
+    {
+      padding: 40px 0 0 40px;  
+    }
+    @include respond-to(landscape-tablet) {
+        padding: 68px 0 0 40px;
+    width: 39.21875%;
+    }
+    
+    @include respond-to(xsmall-screen) {
+        padding: 96px 0 0 80px;
+    }
+    
+    @include respond-to(large-screen) {padding: 116px 0 0 148px;}
+}
+
 .section__col--conatct-form_is-active {
     display: none;
 }
@@ -310,11 +330,11 @@
     height: auto;
     padding-top: 55.85107421875%;
     width: 100%;
-    
+    margin-top: 15px;
     
     @include respond-to(landscape-tablet) {
         width: 60.78%;
-        margin-top: 15px;
+        margin-top: 0;
     }
 }
 
