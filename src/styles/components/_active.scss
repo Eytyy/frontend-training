@@ -2,67 +2,63 @@
 .intro-component_active {
     position: absolute;
     left: 0;
-    padding-left: 148px;
     bottom: 0;
-    width: 39.21875%;
-    border-right: 1px solid #9b9b9b;
-    z-index: 2;
     
-    @include respond-to(larg-screen) {padding-left: 80px;}
-    @include respond-to(l-tablet) {padding-left: 40px;}
-    @include respond-to(p-tablet) {border: 0;}
-    @include respond-to(larg-mobile) {padding-left: 20px;}
-    @include respond-to(medium-mobile) {width:50%;}
+    z-index: 2;
+    width:50%;
+    border: 0;
+    @include respond-to(landscape-mobile) {
+        width: 39.21875%;
+        padding-left: 20px;
+    }
+    
+    @include respond-to(landscape-tablet) {
+        border-right: 1px solid #9b9b9b;
+        padding-left: 40px;
+    }
+    
+    @include respond-to(xsmall-screen) {padding-left: 80px;}
+    @include respond-to(large-screen) {padding-left: 148px;}
 }
+
 
 .close-icon {
     position: absolute;
     right: 55px;
-    top: 40px;
     z-index: 5;
-    
-    @include respond-to(l-tablet) {
-        top: 25px;
-    }
-    
-     @include respond-to(larg-mobile) {
-        top: 20px;
-    }
+    top: 20px;
+    @include respond-to(portrait-tablet) {top: 25px;}
+    @include respond-to(xsmall-screen) {top: 40px;}
 }
-
 
 .section__col--services-info_is-active {
     display: none;
 }
 
+
+
+
 .section__col--service-details_is-active {
     width: 60.78%;
     height: auto;
-    background-image: url(../images/service-side-bg.jpg);
-    background-repeat: no-repeat;
-    background-position: left;
-    background-size: cover;
     padding-top: 55.85107421875%;
     position: relative;
     
     @extend .multiply-blend-bg;
+
+    background-image: url(../images/service-side-bg.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
     
-    @include respond-to(p-tablet) {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
+    @include respond-to(landscape-tablet) {
         width: 60.8%;
-        z-index: 10;
-    }
-    
-    @include respond-to(larg-mobile) {
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        z-index: 10;
     }
 }
 
@@ -83,24 +79,24 @@
 }
 
 .our-services-details-text {
-    margin: 112px 0 0 133px;
-    width: 65%;
-    
-    @include respond-to(larg-screen) {margin: 90px 0 0 90px;}
-    @include respond-to(l-tablet) {margin: 80px 0 0 40px;}
-    @include respond-to(p-tablet) {
+    margin: 80px 0 0 20px;
+    width: 75%;
+    @include respond-to(portrait-tablet) {
         margin: 40px 0 0 20px;
         width: 85%;
     }
-    @include respond-to(larg-mobile) {
-        margin: 80px 0 0 20px;
-        width: 75%;
+    
+    @include respond-to(landscape-tablet) {
+        margin: 80px 0 0 40px;
+        width: 65%;
     }
+    
+    @include respond-to(xsmall-screen) {margin: 90px 0 0 90px;}
+    @include respond-to(large-screen) {margin: 112px 0 0 133px;}
 }
 
-
 .section__col--process-details_is-active {
-    width: 60.78%;
+    width: 100%;
     position: absolute;
     background-image: url(../images/process-side-bg.jpg);
     background-repeat: no-repeat;
@@ -115,7 +111,7 @@
     
     @extend .multiply-blend-bg;
         
-    @include respond-to(larg-mobile) { width: 100%;}
+    @include respond-to(portrait-tablet) { width: 60.78%;}
 }
 
 .section__col--process-details__info_is-active {
@@ -147,158 +143,148 @@
 .process-details__steps {
     width: 100%;
     position: relative;
-    height: 100%;
+    height: auto;
     
-    @include respond-to(l-tablet) {height: auto;}
-    @include respond-to(p-tablet) {height: auto;}
+    @include respond-to(landscape-tablet) {height: 100%;}
 }
+
 
 .process-details__steps__item {
-    width: 25%;
     float: left;
-    border-right: 1px solid #FFFFFF;
-    height: 100%;
-    padding: 118px 30px 0 44px;
-    
-    @include respond-to(larg-screen) {padding: 80px 20px 20px 25px;}
-    @include respond-to(small-screen) {padding: 50px 18px 15px 20px;}
-    @include respond-to(l-tablet) {
-        width: 100%;
-        padding: 20px 100px 20px 45px;
-        height: auto;
-        border-bottom: 1px solid $white;
-        border-right: 0;
+    width: 100%;
+    border-bottom: 1px solid $white;
+    height: auto;
+    padding: 20px 30px 20px 20px;
+
+    @include respond-to(xportrait-mobile) {padding: 15px 20px 15px 20px;}
+    @include respond-to(landscape-tablet) {padding: 20px 100px 20px 45px;}
+    @include respond-to(xsmall-screen) {
+        height: 100%;
+        width: 25%;
+        border-right: 1px solid #FFFFFF;
+        border-bottom: 0;
+        padding: 50px 18px 15px 20px;
     }
-    
-    @include respond-to(p-tablet) {
-        width: 100%;
-        padding: 20px 30px 20px 20px;
-        height: auto;
-        border-bottom: 1px solid $white;
-    }
-    
-    @include respond-to(medium-mobile) {padding: 15px 20px 15px 20px;}
-    @indlude respond-to(xsmall-mobile) {padding: 10px 20px 10px 20px;}
+    @include respond-to(medium-screen) {padding: 80px 20px 20px 25px;}
+    @include respond-to(large-screen) {padding: 118px 30px 0 44px;} 
 }
-
-
+ 
 .process-details__steps__item:last-child {
     border: none;
 }
 
-.number {
-    font-family: Roboto-Bold;
-    font-size: 50px;
+.number {  
     color: #FFFFFF;
+    font-family: Roboto-Bold;
     letter-spacing: 0;
-    line-height: 58px;
-    margin-bottom: 39px;
-    display: block;
+    font-size: 26px;
+    line-height: 28px;
+    margin-bottom: 0px;
+    display: inline-block;
+    vertical-align: middle;
     
-    @include respond-to(larg-screen) {
+    @include respond-to(landscape-tablet) {
+        font-size: 30px;
+        line-height: 32px;
+    }
+    
+       
+    @include respond-to(xsmall-screen) {
+        margin-bottom: 28px;
+        font-size: 40px;
+        line-height: 45px;
+        display: block;
+    }
+    
+     @include respond-to(small-screen) {
         margin-bottom: 28px;
         font-size: 45px;
         line-height: 50px;
     }
     
-    @include respond-to(small-screen) {
-        margin-bottom: 28px;
-        font-size: 40px;
-        line-height: 45px;
-    }
-    
-    @include respond-to(l-tablet) {
-        font-size: 30px;
-        line-height: 32px;
-        margin-bottom: 0px;
-        display: inline-block;
-        vertical-align: middle;
-    }
-    
-    @include respond-to(p-tablet) {
-        font-size: 26px;
-        line-height: 28px;
-        margin-bottom: 0px;
-        display: inline-block;
-        vertical-align: middle;
+    @include respond-to(large-screen) {
+        font-size: 50px;
+        line-height: 58px;
+        margin-bottom: 39px;
     }
 }
 
+
 .process-details__steps__item__icon {
-    width: 70px;
-    height: 70px;
+    width: 35px;
+    height: 35px;
+    vertical-align: middle;
+    margin: 0 8px;
     
-    @include respond-to(larg-screen) {
-        width: 50px;
-        height: 50px;
+    @include respond-to(landscape-tablet) {
+        width: 40px;
+        height: 40px;
     }
     
-    @include respond-to(small-screen) {
+     @include respond-to(xsmall-screen) {
         width: 45px;
         height: 45px;
     }
     
-    @include respond-to(l-tablet) {
-        width: 40px;
-        height: 40px;
-        vertical-align: middle;
-        margin: 0 8px;
+    @include respond-to(small-screen) {
+        width: 50px;
+        height: 50px;
     }
     
-    @include respond-to(p-tablet) {
-        width: 35px;
-        height: 35px;
-        vertical-align: middle;
-        margin: 0 8px;
+    @include respond-to(large-screen) {
+        width: 70px;
+        height: 70px;
     }
 }
 
 
+
 .process-details__steps__item__title {
     font-family: $title;
-    font-size: 32.24px;
-    color: #FFFFFF;
+    color: $white;
     letter-spacing: 0;
-    line-height: 34px;
-    margin: 20px 0;
+    font-size: 20px;  
+    line-height: 20px;
+    display: inline-block;
+    vertical-align: middle;
     
-    @include respond-to(larg-screen) {
-        font-size: 28px;
-        line-height: 32px;
+    @include respond-to(landscape-tablet) {
+        font-size: 22px;  
+        line-height: 22px;
     }
     
-    @include respond-to(small-screen) {
+    @include respond-to(xsmall-screen) {
         font-size: 24px;
         line-height: 28px;
         margin: 15px 0;
     }
     
-    @include respond-to(l-tablet) {
-        font-size: 22px;  
-        line-height: 22px;
-        margin: 0;
-        display: inline-block;
-        vertical-align: middle;
+    @include respond-to(small-screen) {
+        font-size: 28px;
+        line-height: 32px;
+        margin: 20px 0;
     }
     
-    
-    @include respond-to(p-tablet) {
-        font-size: 20px;  
-        line-height: 20px;
-        margin: 0;
-        display: inline-block;
-        vertical-align: middle;
+    @include respond-to(large-screen) {
+        font-size: 32.24px;
+        line-height: 34px;
     }
 }
 
-
 .process-details__steps__item__desc {
     font-family: $body;
-    font-size: 20.86px;
-    color: #FFFFFF;
-    line-height: 22px;
+    color: $white;
+    font-size: 14px;
+    line-height: 16px;
+    margin-top: 5px;
     
-    @include respond-to(larg-screen) {
+    @include respond-to(landscape-tablet) {
+        font-size: 16px;
+        line-height: 18px;
+        margin-top: 10px;
+    }
+    
+    @include respond-to(xsmall-screen) {
         font-size: 18px;
         line-height: 20px;
     }
@@ -308,32 +294,26 @@
         line-height: 20px;
     }
     
-    @include respond-to(l-tablet) {
-        font-size: 16px;
-        line-height: 18px;
-        margin-top: 10px;
-    }
-    
-    @include respond-to(p-tablet) {
-        font-size: 14px;
-        line-height: 16px;
-        margin-top: 5px
+    @include respond-to(large-screen) {
+        font-size: 20.86px;
+        line-height: 22px;
     }
 }
-
 
 .section__col--conatct-form_is-active {
     display: none;
 }
 
+
 .section__col--contact-details_is-active {
-    width: 60.78%;
+    position: relative;
     height: auto;
     padding-top: 55.85107421875%;
-    position: relative;
+    width: 100%;
     
-    @include respond-to(p-tablet) {
-        width: 100%;
+    
+    @include respond-to(landscape-tablet) {
+        width: 60.78%;
         margin-top: 15px;
     }
 }

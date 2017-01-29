@@ -31,8 +31,6 @@
 }
 
 
-
-
 .website-nav__main-menu {
     font-family: $title;
     text-transform: uppercase;
@@ -49,9 +47,6 @@
     @include respond-to(large-screen){margin:152px 0 0 40px;}
     @include respond-to(xlarge-screen){margin: 152px 0 0 54px;}
 }
-
-
-
 
 .website-nav__main-menu__item {
     color: $black;
@@ -92,7 +87,6 @@
     @include respond-to(xsmall-screen) {margin-top: 100px;}
     @include respond-to(medium-screen) {margin-top: 150px;}
     @include respond-to(large-screen) {margin-top: 250px;}
-    @include respond-to(large-screen) {margin-top: 375px;}
 }
 
 .website-nav__contacts {
@@ -151,8 +145,6 @@
     border: 0;
 }
 
-
-
 .website-nav__social__item_bg {
     background-repeat: no-repeat;
     background-position: center center;
@@ -163,7 +155,6 @@
     
     @include respond-to(xsmall-screen) {margin-bottom: 20px;}
 }
-
 
 .facebook {
     background-image: url(../images/facebook.png);
