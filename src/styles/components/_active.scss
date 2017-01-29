@@ -27,6 +27,7 @@
     right: 55px;
     z-index: 5;
     top: 20px;
+    cursor: pointer;
     @include respond-to(portrait-tablet) {top: 25px;}
     @include respond-to(xsmall-screen) {top: 40px;}
 }
@@ -34,8 +35,6 @@
 .section__col--services-info_is-active {
     display: none;
 }
-
-
 
 
 .section__col--service-details_is-active {
@@ -295,6 +294,7 @@
         line-height: 22px;
     }
 }
+
 
 .section__col--contatc-info_is-active {
     width: 100%;

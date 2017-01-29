@@ -73,7 +73,11 @@
     }
 }
 
-.website-nav__main-menu__item_selected {
+.website-nav__main-menu__link:hover {
+    color: #e21318; 
+}
+
+.website-nav__main-menu__link_selected {
     color: #e21318;
 }
 

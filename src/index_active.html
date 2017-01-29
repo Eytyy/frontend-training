@@ -20,10 +20,18 @@
         </span>
         <nav class="website-nav__main-menu">
           <ul>
-            <li class="website-nav__main-menu__item website-nav__main-menu__item_selected">Start</li>
-            <li class="website-nav__main-menu__item">Our Services</li>
-            <li class="website-nav__main-menu__item">Our Process</li>
-            <li class="website-nav__main-menu__item">Contact Info</li>
+             <li class="website-nav__main-menu__item">
+                 <a class="website-nav__main-menu__link website-nav__main-menu__link_selected" href="#">Start</a>
+             </li>
+             <li class="website-nav__main-menu__item">
+                 <a class="website-nav__main-menu__link" href="#our-services">Our Services</a>
+             </li>
+             <li class="website-nav__main-menu__item">
+                 <a class="website-nav__main-menu__link" href="#our-process">Our Process</a>
+             </li>
+             <li class="website-nav__main-menu__item">
+                 <a class="website-nav__main-menu__link" href="#contact">Contact Info</a>
+             </li>
           </ul>
         </nav>
         <div class="website-nav__footer">
@@ -68,7 +76,7 @@
        </div>
     </header>
     <main role="main">
-        <section class="website-section website-section--our-services">
+        <section id="our-services" class="website-section website-section--our-services">
           <div class="website-section--our-services-wrapper">
             <div class="section__col section__col--services-info_is-active"><!--_is-active-->
                 <header class="section__header">
@@ -85,25 +93,25 @@
                   <ul class="services-list">
                       <li class="services-list__item services-list__item_selected">
                           <i class="icon services-list__icon icon--cutting"></i>
-                          <span class="services-list__text text">
+                          <span class="services-list__text">
                               Cutting
                           </span>
                       </li>
                       <li class="services-list__item">
                           <i class="icon services-list__icon icon--edge"></i>
-                          <span class="services-list__text text">
+                          <span class="services-list__text">
                               Edge<br>Processing
                           </span>
                       </li>
                       <li class="services-list__item">
                           <i class="icon services-list__icon icon--drilling"></i>
-                          <span class="services-list__text text">
+                          <span class="services-list__text">
                               Drilling & Boring<br><span class="services-list__text_small">(CNC)</span>
                           </span>
                       </li>
                       <li class="services-list__item">
                           <i class="icon services-list__icon icon--specialized"></i>
-                          <span class="services-list__text text">
+                          <span class="services-list__text">
                               Specialized Products<br><span class="services-list__text_small">(eg. Acoustic Walls and Partition)</span>
                           </span>
                       </li>
@@ -130,7 +138,7 @@
            </div>
         </section>
         <!--////2//////-->
-        <section class="website-section website-section--our-process">
+        <section id="our-process" class="website-section website-section--our-process">
             <div class="section__col section__col--process-info">
                 <div class="section__col--process-info-wrapper">
                    <div class="section__col--process-info-header">
@@ -162,7 +170,6 @@
                         <h3 class="section__side-title">Process Details</h3>
                         <p class="section__side-text">Kattan wood is the result of decades of research and development that has brought together a long-established.</p>
                   </div>
-                  
                   <div class="section__col--process-details__info-content_is-active"><!--_is-active-->
                       <span class="close-icon">
                           <img src="images/block-close-icon_W.svg">
@@ -197,7 +204,7 @@
             </div>
         </section>
         <!--/////3//////-->
-        <section class="website-section website-section--contact">
+        <section id="contact" class="website-section website-section--contact">
              <div class="section__col section__col--contatc-info_is-active"><!-- is-active -->
                  <header class="section__header">
                      <h2 class="section__main-title black-text">CONTACT INFO</h2>
@@ -225,9 +232,9 @@
               <div class="section__col section__col--conatct-form_is-active"><!-- is-active -->
                   <h2 class="section__form__title">CONTACT INFO</h2>
                   <form class="section__form">
-                      <input type="text"  class="section__form__input  section__form__input_small" placeholder="Name">
-                      <input type="email" class="section__form__input  section__form__input_small" placeholder="Email">
-                      <input type="text" class="section__form__input   section__form__input_big" placeholder="Message">
+                      <input type="text"  class="section__form__input section__form__input_small" placeholder="Name">
+                      <input type="email" class="section__form__input section__form__input_small" placeholder="Email">
+                      <input type="text" class="section__form__input section__form__input_big" placeholder="Message">
                       <input type="button" class="section__form__input section__form__input__btn" value="SEND">
                   </form>
                </div>

@@ -14,7 +14,7 @@
     clear: both;
     z-index: 0;
     width: 100%;
-    padding-top: 135%;
+    padding-top: 142%;
     @extend .multiply-blend-bg;
     
     @include respond-to(xportrait-mobile) {padding-top: 100%;}
